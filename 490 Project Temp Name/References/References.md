@@ -1,0 +1,1 @@
+This folder contains external reference materias such as vendor spcifications, vendor user manuals, and other customer information. (This folder is optional).
