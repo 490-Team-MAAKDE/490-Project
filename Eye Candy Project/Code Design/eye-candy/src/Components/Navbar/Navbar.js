@@ -9,7 +9,7 @@ function Navbar() {
     <nav className="navigation">
       <a href="/" className="name">
         {" "}
-        <b> Eye Candy </b>{" "}
+        <b> EYE CANDY </b>{" "}
       </a>
       <div className="drop-down">
         <button
@@ -26,25 +26,25 @@ function Navbar() {
           <li>
             <a href="">
               {" "}
-              <b> Dress up </b>{" "}
+              <b> DRESS UP </b>{" "}
             </a>
           </li>
           <li>
             <a href="">
               {" "}
-              <b> Forum </b>{" "}
+              <b> FORUM</b>{" "}
             </a>
           </li>
           <li>
             <a href="">
               {" "}
-              <b> Login </b>{" "}
+              <b> LOGIN </b>{" "}
             </a>
           </li>
           <li>
             <a href="">
               {" "}
-              <b> Sign up </b>{" "}
+              <b> SIGN UP </b>{" "}
             </a>
           </li>
         </ul>
