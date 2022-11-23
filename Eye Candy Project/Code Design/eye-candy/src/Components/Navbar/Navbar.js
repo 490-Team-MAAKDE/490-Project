@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <nav className='navigation'>
-      <a href="/" className="name">Eye Candy</a>
+      <a href="/" className="name">  <b> Eye Candy </b>  </a>
      <div className="drop-down">
       <button className="drop" onClick={()=> {
           setIsNavExpanded(!isNavExpanded);
@@ -22,16 +22,16 @@ function Navbar() {
       }>
         <ul>
           <li>
-            <a href="">Dress up</a>
+            <a href=""> <b> Dress up </b> </a>
           </li>
           <li>
-            <a href="">Forum</a>
+            <a href=""> <b> Forum </b> </a>
           </li>
           <li>
-            <a href="">Login</a>
+            <a href="">  <b> Login </b> </a>
           </li>
           <li>
-            <a href="">Sign Up</a>
+            <a href="">  <b> Sign up </b> </a>
           </li>
         </ul>
       </div>
