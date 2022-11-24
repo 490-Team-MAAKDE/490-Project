@@ -1,5 +1,5 @@
 # 490-Project
 
-Our project currently consists of a front end deisng on react and a backend machine learning design based in python
+The project will consists of a front end team using on react and a back end team using machine learning design based in python
 
-We will be conecting the python to our web application through the use of flask
+To connect the front/back end applications, the entire team has decided to use Flask
