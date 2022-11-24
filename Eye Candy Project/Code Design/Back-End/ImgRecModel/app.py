@@ -2,8 +2,10 @@ from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+from tensorflow import keras
+from tensorflow.python.keras.layers import Input, Dense
+from tensorflow.keras.utils import load_img
+from tensorflow.keras.utils import img_to_array
 from keras.models import load_model
 import os
 
@@ -59,7 +61,7 @@ def predict():
                 # Predict the class of an image
 
                 with graph.as_default():
-                    model1 = load_model('clothing_classification_model.h5')
+                    model1 = load_model('clothing_classification.h5')
                     class_prediction = model1.predict_classes(img)
                     print(class_prediction)
 
