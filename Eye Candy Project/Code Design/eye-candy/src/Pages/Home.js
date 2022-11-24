@@ -1,9 +1,63 @@
-import React from "react";
+import { React, useRef, useState, useEffect } from "react";
+import "./Home.css";
 
 function Home() {
+  const myRef = useRef();
+  const [isVisible, setIsVisible] = useState();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        const [entry] = entries;
+        // if (!entry.isIntersecting) return;
+        console.log(123);
+        entry.target.classList.remove("section--hidden");
+        observer.unobserve(entry.target);
+      },
+      {
+        root: null,
+        threshold: 1,
+      }
+    );
+    myRef.current.classList.add("section--hidden");
+    observer.observe(myRef.current);
+  }, []);
+
   return (
     <div>
-      <body></body>
+      <div className="header">
+        <div ref={myRef} className="head--section header__title">
+          <h1>
+            When
+            <span class="highlight"> fashion </span>
+            meets technology
+          </h1>
+          <h4>Create your own outfits today</h4>
+          <button className="btn--text">Learn more ↓</button>
+          <img
+            src={require("../Assets/landing-page-photo.jpg")}
+            alt="logo"
+            className="landing-photo"
+          />
+        </div>
+      </div>
+
+      <section>
+        <div className="section" id="section--1"></div>
+        <div className="features"></div>
+      </section>
+
+      <section class="section" id="section--2">
+      <div className="operations"></div>
+      </section>
+
+      <section className="section" id="section--3">
+      <div className="section__title section__title--testimonials"></div>
+      <div className="slider"></div>
+      </section>
+
+
+
     </div>
   );
 }
