@@ -22,6 +22,7 @@ def allowed_file(filename):
     return '.' in filename and \
         filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+# This will iniitalize our graph to help size the picture
 def init():
     global graph
     graph = tf.get_default_graph()
