@@ -10,14 +10,12 @@ function Home() {
     const observer = new IntersectionObserver(
       (entries, observer) => {
         const [entry] = entries;
-        // if (!entry.isIntersecting) return;
-        console.log(123);
         entry.target.classList.remove("section--hidden");
         observer.unobserve(entry.target);
       },
       {
         root: null,
-        threshold: 1,
+        threshold: 0.1,
       }
     );
     myRef.current.classList.add("section--hidden");
