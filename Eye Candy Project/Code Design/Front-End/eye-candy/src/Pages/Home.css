@@ -51,9 +51,37 @@
   display: grid;
   width: 100%;
   min-width: 50%;
-  transform: translateY(-6rem);
+  transform: translateY(-7rem) translateX(2rem);
   grid-column: 2 / 3;
   grid-row: 1 / span 4;
+  z-index: 0;
+}
+
+.landing-photo2 {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  width: 40%;
+  min-width: 50%;
+  transform: translateX(-19rem);
+  grid-column: 2 / 3;
+  grid-row: 1 / span 4;
+  z-index: 1;
+}
+
+.landing-photo3 {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  width: 35%;
+  min-width: 35%;
+  transform: translateX(-3rem) translateY(17rem);
+  /* transform: translateY(16rem); */
+  grid-column: 2 / 3;
+  grid-row: 1 / span 4;
+  z-index: 2;
 }
 
 h1 {
@@ -300,7 +328,7 @@ h4 {
 }
 
 .testimonial::before {
-  content: '\201C';
+  content: "\201C";
   position: absolute;
   top: -5.7rem;
   left: -6.8rem;

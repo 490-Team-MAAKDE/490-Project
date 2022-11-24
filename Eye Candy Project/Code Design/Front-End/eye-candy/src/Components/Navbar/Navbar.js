@@ -37,11 +37,7 @@ function Navbar() {
             <Hamburger size={18} color="black" />
           </button>
         </div>
-        <div
-          className={
-            isNavExpanded ? "inner-nav nav-menu expanded" : "inner-nav nav-menu"
-          }
-        >
+        <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
           <ul>
             <li>
               <a href="" className="nav">
@@ -75,17 +71,6 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        {/* <nav className='navbar'>
-          <div className="nav-links">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li> <a href="">About me </a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact Me</a></li>
-            </ul>
-          </div>
-            
-        </nav> */}
       </nav>
     </div>
   );

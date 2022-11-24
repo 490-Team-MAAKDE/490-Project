@@ -3,6 +3,7 @@ import "./Home.css";
 
 function Home() {
   const myRef = useRef();
+  const img = useRef();
   const [isVisible, setIsVisible] = useState();
 
   useEffect(() => {
@@ -38,6 +39,19 @@ function Home() {
             src={require("../Assets/landing-page-photo.jpg")}
             alt="logo"
             className="landing-photo"
+            ref={img}
+          />
+          <img
+            src={require("../Assets/landing-page-photo2.jpg")}
+            alt="logo"
+            className="landing-photo2"
+            ref={img}
+          />
+          <img
+            src={require("../Assets/landing-page-photo3.jpg")}
+            alt="logo"
+            className="landing-photo3"
+            ref={img}
           />
         </div>
       </div>
@@ -48,16 +62,13 @@ function Home() {
       </section>
 
       <section class="section" id="section--2">
-      <div className="operations"></div>
+        <div className="operations"></div>
       </section>
 
       <section className="section" id="section--3">
-      <div className="section__title section__title--testimonials"></div>
-      <div className="slider"></div>
+        <div className="section__title section__title--testimonials"></div>
+        <div className="slider"></div>
       </section>
-
-
-
     </div>
   );
 }
