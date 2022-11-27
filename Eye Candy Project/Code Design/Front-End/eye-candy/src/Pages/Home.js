@@ -64,16 +64,54 @@ function Home() {
           />
         </div>
       </div>
-      <section>
-        <div className="section" id="section--1"></div>
-        <div className="features"></div>
-      </section>
-      <section class="section" id="section--2">
-        <div className="operations"></div>
-      </section>
-      <section className="section" id="section--3">
-        <div className="section__title section__title--testimonials"></div>
-        <div className="slider"></div>
+      <section className="section" id="section--1">
+        <div className="section__title">
+          <h2 className="section__description">FEATURES</h2>
+          <h3 className="section__header">
+            Everything you need to create a personalized fit
+          </h3>
+        </div>
+        <div className="features">
+          <img
+            src={require("../Assets/features-img1.jpg")}
+            className="features__img"
+          ></img>
+          <div className="features__feature">
+            <div className="features_icon"></div>
+            <h5 class="features__header">100% customizable</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              alias sint quos? Accusantium a fugiat porro reiciendis saepe
+              quibusdam debitis ducimus.
+            </p>
+          </div>
+          <div className="features__feature">
+            <div className="features_icon"></div>
+            <h5 class="features__header">Share your creations</h5>
+            <p>
+              Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
+              inventore ab? Nulla incidunt eius numquam sequi iste pariatur
+              quibusdam!
+            </p>
+          </div>
+          <img
+            src={require("../Assets/features-img2.jpg")}
+            className="features__img"
+          ></img>
+          <img
+            src={require("../Assets/features-img3.jpg")}
+            className="features__img"
+          ></img>
+          <div className="features__feature">
+            <div className="features_icon"></div>
+            <h5 class="features__header">Optimized for color matching</h5>
+            <p>
+              Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
+              eveniet consequatur odit quam quos possimus assumenda dicta fuga
+              inventore ab.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );
