@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import Hamburger from "hamburger-react";
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -52,10 +53,7 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="" className="nav">
-                {" "}
-                <b>LOGIN</b>{" "}
-              </a>
+              <Link to="Login">Login</Link>
             </li>
             <li>
               <a href="" className="nav">
