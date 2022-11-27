@@ -42,12 +42,6 @@ function Navbar() {
             <li>
               <a href="" className="nav">
                 {" "}
-                <b> </b>{" "}
-              </a>
-            </li>
-            <li>
-              <a href="" className="nav">
-                {" "}
                 <b> DRESS UP</b>{" "}
               </a>
             </li>

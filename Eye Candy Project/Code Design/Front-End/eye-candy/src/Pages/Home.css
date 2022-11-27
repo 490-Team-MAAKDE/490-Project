@@ -1,6 +1,6 @@
 :root {
   --color-primary: #f03e3e;
-  --color-secondary: #ffcb03;
+  --color-secondary: #fde047;
   --color-tertiary: #ff585f;
   --color-primary-darker: #4bbb7d;
   --color-secondary-darker: #ffbb00;
@@ -106,6 +106,7 @@ h1 {
   border-image: initial;
   border-bottom: 1px solid currentcolor;
   transition: all 0.3s ease 0s;
+  grid-row: 3;
 }
 
 h4 {
@@ -133,19 +134,6 @@ h4 {
   background-image: red;
 }
 
-.head--section {
-  transition: transform 1s, opacity 1s;
-}
-
-.img--section {
-  transition: transform 1s, opacity 1s;
-}
-
-.img--hidden {
-  opacity: 0;
-  transform: translateX(8rem);
-}
-
 .section--hidden {
   opacity: 0;
   transform: translateY(6rem);
@@ -169,13 +157,17 @@ h4 {
 }
 .section {
   padding: 18rem 3rem;
+  transition: transform 0.5s, opacity 0.5s;
 }
-
+.head--section {
+  transition: transform 0.5s, opacity 0.5s;
+}
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   margin: 0 12rem;
+  min-width: 2rem;
 }
 
 .features__img {
@@ -194,9 +186,28 @@ h4 {
   margin-bottom: 1rem;
 }
 
-.features img {
-  width: auto;
-  height: auto;
-  max-width: 650px;
-  max-height: 650px;
+.section--sign-up {
+  background-color: #f03e3e;
+  border-top: none;
+  border-bottom: 1px solid #444;
+  text-align: center;
+  padding: 10rem 3rem;
+}
+
+.section--sign-up .section__title {
+  margin-bottom: 6rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #343a40;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }

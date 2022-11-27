@@ -1,35 +1,14 @@
-import { React, useRef, useState, useEffect } from "react";
+import { React, useRef, useState, useEffect, useMemo } from "react";
 import "./Home.css";
 
 function Home() {
-  const myRef = useRef();
-  const img1 = useRef();
-  const img2 = useRef();
-  const img3 = useRef();
-
-  const [isVisible, setIsVisible] = useState();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        const [entry] = entries;
-        if (!entry.isIntersecting) return;
-        entry.target.classList.remove("section--hidden");
-        observer.unobserve(entry);
-      },
-      {
-        root: null,
-        threshold: 0.1,
-      }
-    );
-    myRef.current.classList.add("section--hidden");
-    observer.observe(myRef.current);
-  }, []);
+  const header = useRef();
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div>
-      <div className="header">
-        <div ref={myRef} className="head--section header__title">
+      <div ref={header} className="header">
+        <div className="head--section header__title">
           <h1>
             When
             <span class="highlight"> fashion </span>
@@ -41,10 +20,8 @@ function Home() {
             src={require("../Assets/landing-page-photo.jpg")}
             alt="logo"
             className="img--section landing-photo"
-            ref={img1}
             width="722"
             height="481"
-            loading="lazy"
           />
           <img
             src={require("../Assets/landing-page-photo2.jpg")}
@@ -52,7 +29,6 @@ function Home() {
             className="img--section landing-photo2"
             width="361"
             height="542"
-            ref={img2}
           />
           <img
             src={require("../Assets/landing-page-photo3.jpg")}
@@ -60,7 +36,6 @@ function Home() {
             className="img--section landing-photo3"
             width="252"
             height="379"
-            ref={img3}
           />
         </div>
       </div>
@@ -104,7 +79,7 @@ function Home() {
           ></img>
           <div className="features__feature">
             <div className="features_icon"></div>
-            <h5 class="features__header">Optimized for color matching</h5>
+            <h5 class="features__header">Optimized for color theory</h5>
             <p>
               Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
               eveniet consequatur odit quam quos possimus assumenda dicta fuga
@@ -112,6 +87,12 @@ function Home() {
             </p>
           </div>
         </div>
+      </section>
+      <section className="section section--sign-up">
+        <div class="section__title">
+          <h3 className="section__header">Look your best self today.</h3>
+        </div>
+        <button className="btn btn--show-modal">Create an account!</button>
       </section>
     </div>
   );

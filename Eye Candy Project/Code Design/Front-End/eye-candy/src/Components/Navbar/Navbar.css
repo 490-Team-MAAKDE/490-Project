@@ -21,7 +21,7 @@
   width: 60px;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: brown;
+
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -32,7 +32,7 @@
 }
 
 .drop:hover {
-  background-color: #2642af;
+  background-color: #fde047;
 }
 
 .name {
@@ -91,7 +91,7 @@
 
   .nav-menu li:hover {
     transition: all 0.2s ease-in;
-    background-color: blueviolet;
+    background-color: #fde047;
   }
 
   .nav-menu li a {
@@ -116,7 +116,7 @@ margin-left: auto;
 }
 
 .nav-links ul{
-
+                            
     margin: 0;
     padding: 0;
     display: flex;
