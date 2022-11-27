@@ -59,12 +59,10 @@
 
 .landing-photo2 {
   flex: 1;
-  margin-left: auto;
-  margin-right: auto;
   display: grid;
   width: 40%;
   min-width: 50%;
-  transform: translateX(-19rem);
+  transform: translateX(-7rem);
   grid-column: 2 / 3;
   grid-row: 1 / span 4;
   z-index: 1;
@@ -85,13 +83,13 @@
 }
 
 h1 {
-  font-size: 5.5rem;
+  font-size: 5.16rem;
   line-height: 1.35;
 }
 
 .btn--text {
   display: inline-block;
-  font-size: 1.7rem;
+  font-size: 1.44rem;
   font-family: inherit;
   font-weight: 500;
   color: var(--color-primary);
@@ -111,7 +109,7 @@ h1 {
 }
 
 h4 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
   grid-column: 1;
   grid-row: 2;
@@ -139,9 +137,13 @@ h4 {
   transition: transform 1s, opacity 1s;
 }
 
+.img--section {
+  transition: transform 1s, opacity 1s;
+}
+
 .section--hidden {
   opacity: 0;
-  transform: translateY(8rem);
+  transform: translateY(6rem);
 }
 
 .img--hidden {
