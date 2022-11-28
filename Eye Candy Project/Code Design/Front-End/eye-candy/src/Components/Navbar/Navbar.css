@@ -17,11 +17,11 @@
 
 .drop {
   border: 0;
-  height: 60px;
-  width: 60px;
-  padding: 0.5rem;
+  height: 50px;
+  width: 50px;
+  padding: 0.1rem;
   border-radius: 50%;
-
+  background-color: #fff;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -92,7 +92,7 @@
 
   .nav-menu li:hover {
     transition: all 0.2s ease-in;
-    background-color: #fde047;
+    background-color: #f03e3e;
   }
 
   .nav-menu li a {
