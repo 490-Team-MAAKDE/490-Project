@@ -77,7 +77,7 @@
     width: 100%;
     height: calc(100vh - 90px);
     background-color: white;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
   }
 
   .nav-menu li {
@@ -86,6 +86,7 @@
   }
 
   .nav-menu.expanded ul {
+    height: 100%;
     display: block;
   }
 
@@ -97,7 +98,7 @@
   .nav-menu li a {
     color: black;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 0.9rem 0;
   }
 }
 

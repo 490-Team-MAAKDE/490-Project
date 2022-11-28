@@ -4,26 +4,27 @@ import "./Home.css";
 function Home() {
   const header = useRef();
   const [isVisible, setIsVisible] = useState(false);
-
   return (
     <div>
       <div ref={header} className="header">
         <div className="head--section header__title">
-          <h1>
-            When
-            <span class="highlight"> fashion </span>
-            meets technology
-          </h1>
+          <div className="container-narrow">
+            <h1>
+              When
+              <span class="highlight"> fashion </span>
+              meets technology
+            </h1>
+          </div>
           <h4>Create your own outfits today</h4>
           <button className="btn--text">Learn more ↓</button>
           <img
             src={require("../Assets/landing-page-photo.jpg")}
             alt="logo"
             className="img--section landing-photo"
-            width="722"
-            height="481"
+            // width="722"
+            // height="481"
           />
-          <img
+          {/* <img
             src={require("../Assets/landing-page-photo2.jpg")}
             alt="logo"
             className="img--section landing-photo2"
@@ -36,10 +37,10 @@ function Home() {
             className="img--section landing-photo3"
             width="252"
             height="379"
-          />
+          /> */}
         </div>
       </div>
-      <section className="section" id="section--1">
+      {/* <section className="section" id="section--1">
         <div className="section__title">
           <h2 className="section__description">FEATURES</h2>
           <h3 className="section__header">
@@ -93,7 +94,7 @@ function Home() {
           <h3 className="section__header">Look your best self today.</h3>
         </div>
         <button className="btn btn--show-modal">Create an account!</button>
-      </section>
+      </section> */}
     </div>
   );
 }

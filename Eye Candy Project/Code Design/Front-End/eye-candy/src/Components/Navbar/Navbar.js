@@ -42,14 +42,12 @@ function Navbar() {
           <ul>
             <li>
               <a href="" className="nav">
-                {" "}
-                <b> DRESS UP</b>{" "}
+                <b> DRESS UP</b>
               </a>
             </li>
             <li>
               <a href="" className="nav">
-                {" "}
-                <b>FORUM</b>{" "}
+                <b>FORUM</b>
               </a>
             </li>
             <li>
@@ -57,8 +55,7 @@ function Navbar() {
             </li>
             <li>
               <a href="" className="nav">
-                {" "}
-                <b>SIGN UP</b>{" "}
+                <b>Sign up</b>
               </a>
             </li>
           </ul>

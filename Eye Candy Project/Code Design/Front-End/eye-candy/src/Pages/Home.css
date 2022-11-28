@@ -33,7 +33,7 @@
 }
 
 .header__title {
-  max-width: 115rem;
+  max-width: 100vw;
   display: grid;
   grid-template-columns: 3fr 2fr;
   row-gap: 3rem;
@@ -50,8 +50,7 @@
   margin-right: auto;
   display: grid;
   width: 100%;
-  min-width: 50%;
-  transform: translateY(-7rem) translateX(2rem);
+  /* margin-top: 1rem; */
   grid-column: 2 / 3;
   grid-row: 1 / span 4;
   z-index: 0;
@@ -210,4 +209,25 @@ h4 {
   border-radius: 10rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+.container-narrow {
+  max-width: 50rem;
+}
+
+@media screen and (max-width: 1400px) {
+  h1 {
+    font-size: clamp(2.1rem, 4vw, 5.16rem);
+    transition: 0.5s;
+  }
+  h4 {
+    font-size: clamp(1.2rem, 1.44rem, 1.72rem);
+    transition: 0.5s;
+  }
+  .btn--text {
+    font-size: clamp(0.7rem, 0.833rem, 1rem);
+    transition: 0.5s;
+  }
+  .container-narrow {
+    max-width: 33rem;
+  }
 }
