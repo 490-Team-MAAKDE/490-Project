@@ -82,13 +82,14 @@
 }
 
 h1 {
-  font-size: 5.16rem;
+  font-size: clamp(1.2rem, 4vw, 5.16rem);
+  transition: 0.5s;
   line-height: 1.35;
 }
 
 .btn--text {
   display: inline-block;
-  font-size: 1.44rem;
+  font-size: clamp(1rem, 1.3vw, 1.72rem);
   font-family: inherit;
   font-weight: 500;
   color: var(--color-primary);
@@ -109,7 +110,8 @@ h1 {
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: clamp(0.7rem, 1.8vw, 2.4rem);
+  transition: 0.5s;
   font-weight: 500;
   grid-column: 1;
   grid-row: 2;
@@ -214,7 +216,7 @@ h4 {
   max-width: 50rem;
 }
 
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
   h1 {
     font-size: clamp(1.2rem, 4vw, 5.16rem);
     transition: 0.5s;
@@ -230,4 +232,4 @@ h4 {
   .container-narrow {
     max-width: 33rem;
   }
-}
+} */

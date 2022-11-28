@@ -41,16 +41,18 @@ function Navbar() {
         <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
           <ul>
             <li>
-              <Link>Dress up</Link>
+              <Link className="link">Dress up</Link>
             </li>
             <li>
-              <Link>Forum</Link>
+              <Link className="link">Forum</Link>
             </li>
             <li>
-              <Link to="Login">Login</Link>
+              <Link className="link" to="Login">
+                Login
+              </Link>
             </li>
             <li>
-              <Link>Sign up</Link>
+              <Link className="link">Sign up</Link>
             </li>
           </ul>
         </div>

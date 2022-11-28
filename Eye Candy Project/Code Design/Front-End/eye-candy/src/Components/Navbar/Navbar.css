@@ -102,6 +102,10 @@
   }
 }
 
+.link {
+  font-weight: 500;
+}
+
 /* 
 .navbar{
     display: flex;

@@ -40,7 +40,7 @@ function Home() {
           /> */}
         </div>
       </div>
-      {/* <section className="section" id="section--1">
+      <section className="section" id="section--1">
         <div className="section__title">
           <h2 className="section__description">FEATURES</h2>
           <h3 className="section__header">
@@ -94,7 +94,7 @@ function Home() {
           <h3 className="section__header">Look your best self today.</h3>
         </div>
         <button className="btn btn--show-modal">Create an account!</button>
-      </section> */}
+      </section>
     </div>
   );
 }
