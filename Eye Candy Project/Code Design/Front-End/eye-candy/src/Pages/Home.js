@@ -89,12 +89,12 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section section--sign-up">
+      {/* <section className="section section--sign-up">
         <div class="section__title">
           <h3 className="section__header">Look your best self today.</h3>
         </div>
         <button className="btn btn--show-modal">Create an account!</button>
-      </section>
+      </section> */}
     </div>
   );
 }
