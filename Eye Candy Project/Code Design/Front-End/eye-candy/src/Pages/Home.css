@@ -30,6 +30,7 @@
   flex-direction: column;
   align-items: center;
   padding: 0px 3rem;
+  transition: transform 1s, opacity 1s;
 }
 
 .header__title {

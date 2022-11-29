@@ -1,14 +1,32 @@
-import { React, useRef, useState, useEffect, useMemo } from "react";
+import {
+  React,
+  useRef,
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+} from "react";
 import { useInView } from "react-intersection-observer";
 
 import "./Home.css";
 
 function Home() {
-  const { ref: header, inView: isVisible, entry } = useInView(options);
-  
+  const options = {
+    root: null,
+    threshold: 0.2,
+    triggerOnce: true,
+  };
+
+  const { ref: header, inView: isHeaderVisible } = useInView(options);
+  const { ref: section, inView: isSectionVisible } = useInView(options);
+  const { ref: footer, inView: isFooterVisible } = useInView(options);
+
   return (
     <div>
-      <div ref={header} className="header">
+      <div
+        ref={header}
+        className={`header ${isHeaderVisible ? "" : "section--hidden"}`}
+      >
         <div className="head--section header__title">
           <div className="container-narrow">
             <h1>
@@ -26,7 +44,11 @@ function Home() {
           />
         </div>
       </div>
-      <section className="section" id="section--1">
+      <section
+        ref={section}
+        className={`section ${isSectionVisible ? "" : "section--hidden"}`}
+        id="section--1"
+      >
         <div className="section__title">
           <h2 className="section__description">FEATURES</h2>
           <h3 className="section__header">
@@ -75,7 +97,12 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="section section--sign-up">
+      <section
+        ref={footer}
+        className={`section section--sign-up ${
+          isFooterVisible ? "" : "section--hidden"
+        }`}
+      >
         <div className="section__title">
           <h3 className="section__header">Look your best self today.</h3>
         </div>
