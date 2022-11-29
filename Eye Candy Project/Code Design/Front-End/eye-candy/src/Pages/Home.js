@@ -18,26 +18,10 @@ function Home() {
           <h4>Create your own outfits today</h4>
           <button className="btn--text">Learn more ↓</button>
           <img
-            src={require("../Assets/landing-page-photo.jpg")}
+            src={require("../Assets/Untitled.jpg")}
             alt="logo"
             className="img--section landing-photo"
-            // width="722"
-            // height="481"
           />
-          {/* <img
-            src={require("../Assets/landing-page-photo2.jpg")}
-            alt="logo"
-            className="img--section landing-photo2"
-            width="361"
-            height="542"
-          />
-          <img
-            src={require("../Assets/landing-page-photo3.jpg")}
-            alt="logo"
-            className="img--section landing-photo3"
-            width="252"
-            height="379"
-          /> */}
         </div>
       </div>
       <section className="section" id="section--1">
@@ -89,12 +73,12 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* <section className="section section--sign-up">
+      <section className="section section--sign-up">
         <div class="section__title">
           <h3 className="section__header">Look your best self today.</h3>
         </div>
         <button className="btn btn--show-modal">Create an account!</button>
-      </section> */}
+      </section>
     </div>
   );
 }
