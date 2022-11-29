@@ -1,9 +1,11 @@
 import { React, useRef, useState, useEffect, useMemo } from "react";
+import { useInView } from "react-intersection-observer";
+
 import "./Home.css";
 
 function Home() {
-  const header = useRef();
-  const [isVisible, setIsVisible] = useState(false);
+  const { ref: header, inView: isVisible, entry } = useInView(options);
+  
   return (
     <div>
       <div ref={header} className="header">
@@ -11,7 +13,7 @@ function Home() {
           <div className="container-narrow">
             <h1>
               When
-              <span class="highlight"> fashion </span>
+              <span className="highlight"> fashion </span>
               meets technology
             </h1>
           </div>
@@ -38,7 +40,7 @@ function Home() {
           ></img>
           <div className="features__feature">
             <div className="features_icon"></div>
-            <h5 class="features__header">100% customizable</h5>
+            <h5 className="features__header">100% customizable</h5>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
               alias sint quos? Accusantium a fugiat porro reiciendis saepe
@@ -47,7 +49,7 @@ function Home() {
           </div>
           <div className="features__feature">
             <div className="features_icon"></div>
-            <h5 class="features__header">Share your creations</h5>
+            <h5 className="features__header">Share your creations</h5>
             <p>
               Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
               inventore ab? Nulla incidunt eius numquam sequi iste pariatur
@@ -64,7 +66,7 @@ function Home() {
           ></img>
           <div className="features__feature">
             <div className="features_icon"></div>
-            <h5 class="features__header">Optimized for color theory</h5>
+            <h5 className="features__header">Optimized for color theory</h5>
             <p>
               Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
               eveniet consequatur odit quam quos possimus assumenda dicta fuga
@@ -74,7 +76,7 @@ function Home() {
         </div>
       </section>
       <section className="section section--sign-up">
-        <div class="section__title">
+        <div className="section__title">
           <h3 className="section__header">Look your best self today.</h3>
         </div>
         <button className="btn btn--show-modal">Create an account!</button>
