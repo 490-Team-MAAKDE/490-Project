@@ -163,10 +163,10 @@ h4 {
 }
 .section {
   padding: 15rem 3rem;
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.4s, opacity 0.4s;
 }
 .head--section {
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.4s, opacity 0.4s;
 }
 .features {
   display: grid;
