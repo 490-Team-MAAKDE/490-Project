@@ -21,7 +21,7 @@
   width: 50px;
   padding: 0.1rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: pink;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -64,8 +64,10 @@
 
 @media screen and (max-width: 750px) {
   .drop {
-    display: block;
+    display: block; 
   }
+
+  
 
   .nav-menu ul {
     display: none;
