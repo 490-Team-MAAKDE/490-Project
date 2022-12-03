@@ -52,7 +52,9 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="link">Sign up</Link>
+              <Link className="link" to="SignUp">
+                Sign up
+              </Link>
             </li>
           </ul>
         </div>

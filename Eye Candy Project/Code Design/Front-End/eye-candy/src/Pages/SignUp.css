@@ -1,0 +1,13 @@
+.signup-container{
+    height: 400px;
+    border: 2px solid black
+}
+
+.signup-content{
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+   
+}
