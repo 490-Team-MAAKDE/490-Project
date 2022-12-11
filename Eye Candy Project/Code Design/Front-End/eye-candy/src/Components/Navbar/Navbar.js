@@ -2,7 +2,7 @@ import "./Navbar.css";
 import Hamburger from "hamburger-react";
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-
+import DressUp from "../../Pages/DressUp";
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
@@ -41,13 +41,15 @@ function Navbar() {
         <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
           <ul>
             <li>
-              <Link className="link">Dress up</Link>
+              <Link className="link" to="dressup">
+                Dress up
+              </Link>
             </li>
             <li>
               <Link className="link">Forum</Link>
             </li>
             <li>
-              <Link className="link" to="Login">
+              <Link className="link" to="login">
                 Login
               </Link>
             </li>
