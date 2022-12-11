@@ -40,4 +40,4 @@ def get_class_names():
     'scarf','shirt','shoes','shirt','shoes','shorts','skin','skirt','sneakers','socks','stockings',
     'suit','sunglasses','sweater','sweatshirt','swimswear','t-shirt','tie','tights','top','vest',
     'vest','wallet','watch','wedges']
-    return class_names
+    return class_names  
