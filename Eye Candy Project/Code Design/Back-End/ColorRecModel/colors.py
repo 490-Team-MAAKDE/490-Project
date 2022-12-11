@@ -97,9 +97,9 @@ class ColorNames():
         return peaked_color
 
 
-# Testing Color Labels
-colorChoice = "#CD607E"
-color_obj = ColorNames()
+# # Testing Color Labels
+# colorChoice = "#CD607E"
+# color_obj = ColorNames()
 
-peaked_Color_Name = color_obj.getColorName(colorChoice)
-print("Peaked color name: " + peaked_Color_Name)
+# peaked_Color_Name = color_obj.getColorName(colorChoice)
+# print("Peaked color name: " + peaked_Color_Name)
