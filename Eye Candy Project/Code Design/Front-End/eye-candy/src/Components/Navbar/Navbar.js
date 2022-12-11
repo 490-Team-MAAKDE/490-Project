@@ -54,7 +54,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="link" to="SignUp">
+              <Link className="link" to="signup">
                 Sign up
               </Link>
             </li>

@@ -13,7 +13,7 @@ import "./Home.css";
 function Home() {
   const options = {
     root: null,
-    threshold: 0.2,
+    threshold: 0.18,
     triggerOnce: true,
   };
 

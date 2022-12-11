@@ -37,7 +37,7 @@
   max-width: 100vw;
   display: grid;
   grid-template-columns: 3fr 2fr;
-  row-gap: 2.3rem;
+  row-gap: 3.1rem;
   column-gap: 0.67rem;
   align-content: center;
   justify-content: center;
@@ -91,7 +91,7 @@ h1 {
 
 .btn--text {
   display: inline-block;
-  font-size: clamp(0.5rem, 1.3vw, 1.25rem);
+  font-size: clamp(0.9rem, 1.4vw, 1.4rem);
   font-family: inherit;
   font-weight: 500;
   color: var(--color-primary);
@@ -162,11 +162,11 @@ h4 {
   font-weight: 500;
 }
 .section {
-  padding: 15rem 3rem;
-  transition: transform 0.4s, opacity 0.4s;
+  padding: 10rem 3rem;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .head--section {
-  transition: transform 0.4s, opacity 0.4s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .features {
   display: grid;
