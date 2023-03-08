@@ -4,6 +4,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+In the Server Folder located in ...\490-Project-main\Eye Candy Project\Code Design\Front-End\eye-candy\src, you can run:
+
+### `npm run devStart` 
+
+Runs the database server (localhost:3001) using 
+node database.j AND nodemon commands.
+Open [http://localhost:3001] as this will output any error messages for that instance. By default, you should be seeing Cannot GET/ , however this is not an error.
+
+MySQL will transition from local to AWS at a later point. [Refer to Erik and Aaron for any questions]
+
+If you are attempting to try this, on your local machine ensure that MySQL Workbench is installed and running and refer to database.js for the data needed for your DB as well as schema declarations
+
+
 In the project directory, you can run:
 
 ### `npm start`

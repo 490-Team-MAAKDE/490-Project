@@ -16,3 +16,9 @@ npm install react-intersection-observer
 npm install hamburger-react
 npm install web-vitals
 
+npm install mysql
+npm install axios
+npm install express
+npm install nodemon
+npm install body-corser
+npm install mysql2
