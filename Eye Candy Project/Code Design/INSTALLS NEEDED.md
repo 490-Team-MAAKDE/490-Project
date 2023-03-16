@@ -22,3 +22,14 @@ npm install express
 npm install nodemon
 npm install body-corser
 npm install mysql2
+
+## Do you want this REPO? | Downloads NEEDED
+Once pulling the repo from github, open your terminal
+
+You will 
+        1. cd into Front-End
+        2. npm install 
+        3. npm install axio -save dev
+
+These should be the only steps required to pull the repo and make it work at this moment.
+
