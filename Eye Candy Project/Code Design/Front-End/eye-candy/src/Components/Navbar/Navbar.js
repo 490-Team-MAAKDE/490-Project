@@ -43,7 +43,7 @@ function Navbar() {
           <ul>
             <li>
               <Link className="link" to="imageupload">
-                Dress up
+                Image Upload
               </Link>
             </li>
             <li>

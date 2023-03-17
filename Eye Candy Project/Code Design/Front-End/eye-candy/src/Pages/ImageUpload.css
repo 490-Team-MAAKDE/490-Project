@@ -6,16 +6,16 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 #title {
-  color: red;
+  color: #eb2828;
 }
 
-#file-submit {
-  color: green;
-}
 
 #file {
-  color: blue;
+  color: #eb2828;
 }
