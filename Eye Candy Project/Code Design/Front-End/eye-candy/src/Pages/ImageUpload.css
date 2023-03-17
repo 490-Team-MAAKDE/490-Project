@@ -1,4 +1,5 @@
-.container {
+.imageUpload {
+  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,3 +8,14 @@
   width: 100vw;
 }
 
+#title {
+  color: red;
+}
+
+#file-submit {
+  color: green;
+}
+
+#file {
+  color: blue;
+}

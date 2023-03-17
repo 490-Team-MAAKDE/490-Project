@@ -2,7 +2,8 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.js";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
-import DressUp from "./Pages/DressUp";
+import ImageUpload from "./Pages/ImageUpload";
+
 
 import SignUp from "./Pages/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/dressup" element={<DressUp />} />
+        <Route path="/imageupload" element={<ImageUpload />} />
         <Route />
       </Routes>
     </Router>
