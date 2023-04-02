@@ -1,11 +1,15 @@
-.login-container{
-    height: 200px;
-    border: 2px solid black
+.login-container {
+  height: 200px;
 }
 
-.login-content{
-    height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.login-content {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
 }

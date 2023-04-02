@@ -47,7 +47,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="link">Forum</Link>
+              <Link className="link" to="forum"> Forum</Link>
             </li>
             <li>
               <Link className="link" to="login">

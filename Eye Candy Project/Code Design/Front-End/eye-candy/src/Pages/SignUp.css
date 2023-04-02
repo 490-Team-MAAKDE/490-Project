@@ -1,13 +1,13 @@
-.signup-container{
-    height: 400px;
-    border: 2px solid black
+.signup-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 128px;
 }
 
-.signup-content{
-    height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-   
+.signup-container form {
+  display: flex;
+  flex-direction: column;
 }

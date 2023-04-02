@@ -1,12 +1,13 @@
 /*Ensure you have npm installed 'react' and 'axios' in integrated terminal 
 for: Eye Candy Project\Code Design\Front-End\eye-candy\src */
 import React, { useEffect, useState } from "react";
+import { Button } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/react";
 import Axios from "axios";
 import "./Login.css";
 
 //This is the Sign Up Funtion for the overall page
 function Login() {
-
   /*This is the useState to set the value of the stated 
   variables from whatever the user inputs in the text boxes.*/
   const [username, setUsername] = useState("");
@@ -20,7 +21,6 @@ function Login() {
   place them in\in variables to be verified with the SQL 
   Database*/
   const login = (e) => {
-
     /*Temporarily palced this since the page automatically 
     reroutes after submit*/
     e.preventDefault();
@@ -45,37 +45,43 @@ function Login() {
      status*/
     Axios.get("http://localhost:3001/login").then((response) => {
       if (response.data.loggedIn == true) {
-      setLoginStatus(response.data.user[0].username);
-      } 
-    })
-  }, [])
+        setLoginStatus(response.data.user[0].username);
+      }
+    });
+  }, []);
 
   /*Display the form for users to input their login credentials.
   This will compare with SQL and determine authenticity*/
   return (
     <div className="login-content">
       <div className="login-container">
-        <form action="">
-          <label htmlFor="userName">Username: </label> <br />
-          <input
-            type="text"
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-          />{" "}
+        <form action="" className="form-container">
+          <div>
+            <label htmlFor="userName">Username: </label> <br />
+            <Input
+              type="text"
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
+            />
+          </div>
           <br />
-          <label htmlFor="password">Password: </label> <br />
-          <input
-            type="text"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />{" "}
+          <div>
+            <label htmlFor="password">Password: </label> <br />
+            <Input
+              type="text"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </div>
           <br />
           <p>
             Don't have an account? Click <a href="">here</a>
           </p>
-          <button onClick={login}>Login</button>
+          <Button colorScheme="yellow" marginTop={5}>
+            Login
+          </Button>
         </form>
       </div>
       {/* loginStatus plays a roll in currently displaying 
