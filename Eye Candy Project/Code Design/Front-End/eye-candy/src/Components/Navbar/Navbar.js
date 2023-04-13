@@ -41,6 +41,11 @@ function Navbar() {
         </div>
         <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
           <ul>
+          <li>
+              <Link className="link" to="dashboard">
+                Dashboard
+              </Link>
+            </li>
             <li>
               <Link className="link" to="imageupload">
                 Image Upload

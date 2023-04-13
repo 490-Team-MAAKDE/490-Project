@@ -1,0 +1,50 @@
+/* Dashboard container */
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  /* Dashboard heading */
+  .dashboard-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Dashboard subheading */
+  .dashboard-subheading {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  /* Dashboard components container */
+  .dashboard-components {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* Dashboard component */
+  .dashboard-component {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dashboard component heading */
+  .dashboard-component-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Dashboard component description */
+  .dashboard-component-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
