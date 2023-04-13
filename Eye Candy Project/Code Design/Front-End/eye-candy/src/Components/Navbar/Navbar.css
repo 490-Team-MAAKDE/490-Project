@@ -108,6 +108,34 @@
   font-weight: 500;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  padding: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
 /* 
 .navbar{
     display: flex;
