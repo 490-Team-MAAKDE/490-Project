@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:both": "concurrently \"npm start\" \"cd %cd%/../../Back-End/ImageRecModel && python app.py\"",
+    "start:both": "concurrently \"npm start\" \"cd %cd%/src/Server && npm run devStart\" \"cd %cd%/../../Back-End/ImageRecModel && python app.py\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
