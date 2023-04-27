@@ -123,6 +123,19 @@ app.post("/login", (req, res) => {
     );
 });
 
+app.get("/search/:query", (req, res) => {
+    const searchTerm = req.params.query;
+    const query = `SELECT * FROM customer WHERE username LIKE '%${searchTerm}%'`;
+  
+    db.query(query, (err, result) => {
+      if (err) {
+        res.status(500).send({ error: "Error searching for customers." });
+      } else {
+        res.send(result);
+      }
+    });
+  });
+
 /*Not really necessary, however still here to troubleshoot and see if
 connection is not working.*/
 app.listen(3001, () =>{

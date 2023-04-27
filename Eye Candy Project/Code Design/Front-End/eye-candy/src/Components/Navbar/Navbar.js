@@ -66,6 +66,11 @@ function Navbar() {
               </Link>
             </li>
             <li>
+              <Link className="link" to="searchpage">
+                Search Page
+              </Link>
+            </li>
+            <li>
               <SearchBar></SearchBar>
             </li>
           </ul>
