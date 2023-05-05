@@ -14,7 +14,7 @@
 }
 
 #title {
-  color: #eb2828;
+  color: #f03e3e;
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -29,13 +29,13 @@
 }
 
 #file {
-  color: #eb2828;
+  color: #f03e3e;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
 #imageSubmit {
-  background-color: #eb2828;
+  background-color: #f03e3e;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -47,7 +47,8 @@
 }
 
 #imageSubmit:hover {
-  background-color: #d11f1f;
+  background-color: #f03e3e;
+  transform: scale(0.98);
 }
 
 #title2 {

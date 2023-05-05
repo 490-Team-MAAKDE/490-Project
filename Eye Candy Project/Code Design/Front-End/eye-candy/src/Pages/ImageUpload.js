@@ -39,12 +39,14 @@ const ImageUpload = () => {
   };
 
     
-  // We will soon be fetching color rec outputs into this same page   
+  // Color rec outputs will come out here as well.    
   return (
     <div className="imageUpload">
       <h1 id="title">Dress ME Up</h1>
       <form id="form-input" onSubmit={handleSubmit}>
         <input type="file" name="file" id="file" required />
+        <br></br>
+        <br></br>
         <button id="imageSubmit" type="submit">Predict</button>
       </form>
       <h2 id="title2">{prediction}</h2>
