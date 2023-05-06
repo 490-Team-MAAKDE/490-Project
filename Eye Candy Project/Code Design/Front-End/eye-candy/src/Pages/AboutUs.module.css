@@ -1,0 +1,168 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+li{
+  font-size: 1.5rem;
+}
+section{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  /* background-color: #f8f8f8; */
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.header__title__about h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #333;
+}
+
+.mission {
+  /* background-color: #f8f8f8; */
+  padding: 3rem;
+  text-align: center;
+  line-height: 5rem;
+}
+
+.features {
+  /* background-color: #f0f0f0; */
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.features ul {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column ;
+  justify-content: center;
+}
+
+.features li {
+  flex-basis: calc(33.33% - 2rem);
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.features li img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.features li h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.features li p {
+  font-size: 1rem;
+}
+
+.team {
+  /* background-color: #f8f8f8; */
+  padding: 3rem;
+  text-align: center;
+}
+
+.team ul {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team li {
+  flex-basis: calc(16.666% - 2rem);
+  margin: 1rem;
+}
+
+.team li img {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team li p {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.contact {
+  /* background-color: #f0f0f0; */
+  padding: 3rem;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
