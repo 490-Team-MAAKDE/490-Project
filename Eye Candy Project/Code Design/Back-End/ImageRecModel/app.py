@@ -16,7 +16,7 @@ model = load_model('clothing_classifier_model_v2.h5')
 app = Flask(__name__)
 
 # This will enable cors that allows us to connect our flask to react
-CORS(app)
+CORS(app, resources={r"/predict": {"origins": "http://localhost:3000"}})
 
 # We are setting max size of file as 10mb
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
