@@ -1,45 +1,29 @@
 /* Reset styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Typography */
-body {
+.aboutbody{
   font-family: "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
 }
-
-h1, h2, h3 {
+.headings{
   font-weight: 600;
   margin-bottom: 1rem;
-}
-
-h1 {
   font-size: 3rem;
 }
 
-h2 {
-  font-size: 2rem;
-}
 
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
+.aboutp{
   margin-bottom: 1.5rem;
 }
-li{
+.aboutli{
   font-size: 1.5rem;
 }
-section{
+/* section{
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
+} */
 
 /* Layout */
 .container {
@@ -48,7 +32,7 @@ section{
   padding: 1rem;
 }
 
-header {
+.header__title__about {
   /* background-color: #f8f8f8; */
   padding: 2rem;
   text-align: center;
@@ -165,4 +149,9 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+}
+
+.about{
+  background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
 }
