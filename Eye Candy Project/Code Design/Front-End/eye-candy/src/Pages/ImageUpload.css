@@ -1,63 +1,136 @@
 .imageUpload {
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #f5f5f5;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #title {
-  color: #eb2828;
-  font-size: 36px;
+  color: #f03e3e;
   font-weight: bold;
   margin-bottom: 20px;
+  font-size: 48px;
+  margin-top: 50px;
+
 }
 
 #form-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 #file {
-  color: #eb2828;
+  color: #f03e3e;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
+
+
 #imageSubmit {
-  background-color: #eb2828;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 10px;
   font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.2s ease-in-out;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 #imageSubmit:hover {
-  background-color: #d11f1f;
+  transform: scale(0.98);
+  background-color: #3e8e41;
 }
 
 #title2 {
-  margin-top: 20px;
-  font-size: 24px;
+  margin-top: 50px;
+  font-size: 28px;
   font-weight: bold;
+  color: #333;
 }
 
-img {
-  max-width: 100%;
-  margin-top: 20px;
-  border-radius: 4px;
+.description {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.description h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.how-to {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.how-to h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.how-to ol {
+  list-style-type: decimal;
+  font-size: 20px;
+  line-height: 1.5;
+  padding-left: 40px;
+  color: #555;
+  text-align: left;
+}
+
+.how-to li {
+  margin-bottom: 10px;
+}
+
+.social-proof {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.social-proof h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.social-proof ul {
+  list-style-type: none;
+  font-size: 20px;
+  line-height: 1.5;
+  padding-left: 0;
+}
+
+.social-proof li {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.social-proof li::before {
+  content: "\201C"; /* opening quotation mark */
+  font-size: 36px;
+  color: #aaa;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: -15px;
+}
+
+.social-proof li::after {
+  content: "\201D"; /* closing quotation mark */
+  font-size: 36px;
+  color: #aaa;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: -15px;
 }

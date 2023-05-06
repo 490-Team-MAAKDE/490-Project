@@ -1,15 +1,62 @@
 .login-container {
-  height: 200px;
-}
-
-.login-content {
-  height: 92vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 92vh;
+  background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+  color: #fff;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 30rem;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+}
+
+.form-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  color: #ff5f6d;
+  cursor: pointer;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container button:hover {
+  background-color: #ff5f6d;
+  color: #fff;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+}
+
+.form-container p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #fff;
 }
