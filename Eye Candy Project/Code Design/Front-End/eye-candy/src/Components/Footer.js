@@ -1,10 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Footer.css'
 
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    
-</link>
 function Footer() {
   return (
     
