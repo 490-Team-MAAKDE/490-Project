@@ -1,16 +1,6 @@
-<<<<<<< Updated upstream
 import React from 'react';
 import './Footer.css'
 
-=======
-import React from "react";
-import "./Footer.css";
-
-<link
-  rel="stylesheet"
-  href="path/to/font-awesome/css/font-awesome.min.css"
-></link>;
->>>>>>> Stashed changes
 function Footer() {
   return (
     <footer className="footer">
