@@ -9,6 +9,8 @@ import os
 import base64
 from werkzeug.utils import secure_filename
 
+# Commiting a test piece of code
+print('Hello World')
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
