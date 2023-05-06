@@ -36,6 +36,8 @@ them in variables to be then posted to the SQL Database*/
 create an account*/
   return (
     <div className="signup-content">
+      <div className="signup-hero-bar">
+      </div>
       <div className="signup-container">
         <form action="">
           <div>
