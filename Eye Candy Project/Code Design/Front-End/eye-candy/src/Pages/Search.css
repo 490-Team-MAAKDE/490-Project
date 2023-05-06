@@ -1,0 +1,133 @@
+.search-hero-bar {
+    background-image: url("../Assets/pexels-philbert-pembani-2533352.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-hero-title {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+  }
+
+.search-heading {
+    border: 1px solid rgb(245, 133, 133);
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #D31027, #EA384D);
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+  }
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+    color: #fff;
+    
+  }
+  
+  .search-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .search-input {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    width: 30rem;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+  }
+  
+  .search-button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #ff5f6d;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .search-button:hover {
+    background-color: #ff5f6d;
+    color: #fff;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+  }
+  
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-results a {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: #fff6c8;
+    color: #ff5f6d;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 0 1rem rgba(255, 95, 109, 0.5);
+  }
+  
+  .search-results > div {
+    margin-bottom: 50px;
+  }
+  
+  .search-results a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem rgba(243, 255, 172, 0.8);
+  }
+
+  .search-section {
+    margin-bottom: 40px;
+  }
+
+  .search-subtitle {
+    font-size: clamp(0.64rem, 2vw, 2.4rem);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .search-text {
+    font-size: clamp(0.5rem, 1.6vw, 1.6rem);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #343a40;
+  }

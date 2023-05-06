@@ -1,13 +1,99 @@
-.signup-container {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  padding-top: 128px;
+.signup-hero-bar {
+  background-image: url("../Assets/pexels-tim-mossholder-942317.jpg");
+  background-position: center 16.8cm;
+  background-size: 32% ;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.signup-container form {
+.signup-hero-title {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+}
+
+.signup-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 92vh;
+  background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+  color: #fff;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 30rem;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+}
+
+.form-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  color: #ff5f6d;
+  cursor: pointer;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container button:hover {
+  background-color: #ff5f6d;
+  color: #fff;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+}
+
+.form-container p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  width: 100%;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.signup-container input[type="text"]:focus,
+.signup-container input[type="password"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
 }

@@ -5,7 +5,7 @@
 .navigation {
   display: flex;
   color: white;
-  height: 60px;
+  height: 70px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -29,6 +29,12 @@
   right: 25px;
   transform: translateY(-50%);
   display: none;
+}
+
+.navbar-name,
+.navbar-image {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .drop:hover {
@@ -57,6 +63,7 @@
   display: block;
   width: 100%;
 }
+
 .nav-menu li a:hover {
   transition: all 0.2s ease-in;
   color: white;
@@ -64,10 +71,8 @@
 
 @media screen and (max-width: 750px) {
   .drop {
-    display: block; 
+    display: block;
   }
-
-  
 
   .nav-menu ul {
     display: none;
@@ -104,8 +109,26 @@
   }
 }
 
+.nav-menu ul li a {
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 0.9rem 0;
+}
+
+.nav__logo {
+  width: 48px;
+  margin-top: 0;
+}
+
+.container {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
 .link {
   font-weight: 500;
+  height: 100%;
 }
 
 .search-bar {
@@ -134,7 +157,6 @@
   font-size: 16px;
   cursor: pointer;
 }
-
 
 /* 
 .navbar{

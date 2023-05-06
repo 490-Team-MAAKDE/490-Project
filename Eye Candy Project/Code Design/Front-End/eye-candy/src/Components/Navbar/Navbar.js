@@ -2,8 +2,6 @@ import "./Navbar.css";
 import Hamburger from "hamburger-react";
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import ImageUpload from "../../Pages/ImageUpload";
-import SearchBar from "./Searchbar";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -26,10 +24,15 @@ function Navbar() {
   return (
     <div className="nav-container">
       <nav className="nav navigation">
-        <a href="/" className="nav name">
-          {" "}
-          <b> EYE CANDY </b>{" "}
-        </a>
+        <div classname="container">
+          <a href="/" className="nav-name">
+            <img
+              src={require("../../Assets/logo.png")}
+              className="nav__logo"
+              alt="Logo for eyecandy"
+            ></img>
+          </a>
+        </div>
         <div className="drop-down">
           <button
             className="drop"
@@ -42,7 +45,7 @@ function Navbar() {
         </div>
         <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
           <ul>
-          <li>
+            <li>
               <Link className="link" to="dashboard">
                 Dashboard
               </Link>
@@ -53,7 +56,19 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="link" to="forum"> Forum</Link>
+              <Link className="link" to="about-us">
+                About us
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="forum">
+                Forum
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="search">
+                Search
+              </Link>
             </li>
             <li>
               <Link className="link" to="login">
@@ -64,9 +79,6 @@ function Navbar() {
               <Link className="link" to="signup">
                 Sign up
               </Link>
-            </li>
-            <li>
-              <SearchBar></SearchBar>
             </li>
           </ul>
         </div>
