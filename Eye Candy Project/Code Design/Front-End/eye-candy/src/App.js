@@ -5,6 +5,7 @@ import Login from "./Pages/Login";
 import ImageUpload from "./Pages/ImageUpload";
 import Forum from "./Pages/Forum";
 import Dashboard from "./Pages/Dashboard";
+import Footer from "./Components/Footer.js";
 
 import SignUp from "./Pages/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/forum" element={<Forum />} />
           <Route />
         </Routes>
+        <Footer/>
       </Router>
     </ChakraProvider>
   );

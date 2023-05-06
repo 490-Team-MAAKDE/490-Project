@@ -97,17 +97,6 @@ function Home() {
           </div>
         </div>
       </section>
-      <section
-        ref={footer}
-        className={`section section--sign-up ${
-          isFooterVisible ? "" : "section--hidden"
-        }`}
-      >
-        <div className="section__title">
-          <h3 className="section__header">Look your best self today.</h3>
-        </div>
-        <button className="btn btn--show-modal">Create an account!</button>
-      </section>
     </div>
   );
 }

@@ -26,7 +26,12 @@ function Navbar() {
   return (
     <div className="nav-container">
       <nav className="nav navigation">
-        <a href="/" className="nav name">
+        
+        <a href="/" className="nav-name">
+        <img
+            src={require("../../Assets/logo.png")}
+            className="footer__logo"
+          ></img>
           {" "}
           <b> EYE CANDY </b>{" "}
         </a>
