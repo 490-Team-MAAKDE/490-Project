@@ -26,8 +26,16 @@ function Search() {
 
   return (
     <div className="search-page">
+      <div className="search-hero-bar">
+      </div>
       <div className="search-container">
-        <div className="search-photo-column"></div>
+        <div className="search-section">
+          <h2 className="search-subtitle">Search Across Users</h2>
+
+          <p className="search-text">
+            Having the ability to search for users on a website can greatly enhance the user experience and make it easier for people to connect with each other. Whether it's a social media platform, an online marketplace, or a professional networking site, allowing users to search for each other can help to build communities, foster collaborations, and ultimately drive more engagement on the platform.
+          </p>
+        </div>
         <form className="search-form" onSubmit={handleSearchSubmit}>
           <input
             className="search-input"
@@ -40,7 +48,6 @@ function Search() {
             Search
           </button>
         </form>
-        <div className="search-photo-column"></div>
         <div className="search-results">
           {searchResults.map((result) => (
             <div key={result.id}>
