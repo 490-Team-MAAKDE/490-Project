@@ -49,6 +49,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+.form-container .click-here:hover {
+  transform: scale(0.98);
+  color: #b00d0d;
+}
+
 .form-container button:hover {
   background-color: #ff5f6d;
   color: #fff;
