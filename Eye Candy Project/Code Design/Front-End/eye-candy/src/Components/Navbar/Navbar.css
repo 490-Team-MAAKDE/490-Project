@@ -31,6 +31,12 @@
   display: none;
 }
 
+.navbar-name, .navbar-image {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 .drop:hover {
   background-color: #fde047;
 }

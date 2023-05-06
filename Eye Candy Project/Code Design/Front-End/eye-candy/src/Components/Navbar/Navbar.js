@@ -2,8 +2,6 @@ import "./Navbar.css";
 import Hamburger from "hamburger-react";
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
-import ImageUpload from "../../Pages/ImageUpload";
-import SearchBar from "./Searchbar";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -26,7 +24,12 @@ function Navbar() {
   return (
     <div className="nav-container">
       <nav className="nav navigation">
-        <a href="/" className="nav name">
+        
+        <a href="/" className="nav-name">
+        <img
+            src={require("../../Assets/logo.png")}
+            className="footer__logo"
+          ></img>
           {" "}
           <b> EYE CANDY </b>{" "}
         </a>
@@ -64,9 +67,6 @@ function Navbar() {
               <Link className="link" to="signup">
                 Sign up
               </Link>
-            </li>
-            <li>
-              <SearchBar></SearchBar>
             </li>
           </ul>
         </div>
