@@ -79,7 +79,7 @@ function Login() {
           <p>
             Don't have an account? Click <a href="">here</a>
           </p>
-          <Button colorScheme="yellow" marginTop={5}>
+          <Button colorScheme="yellow" marginTop={5} onClick={login}>
             Login
           </Button>
         </form>
