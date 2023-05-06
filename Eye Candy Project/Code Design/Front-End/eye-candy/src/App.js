@@ -7,6 +7,7 @@ import Forum from "./Pages/Forum";
 import Dashboard from "./Pages/Dashboard";
 import Footer from "./Components/Footer.js";
 import AboutUs from "./Pages/AboutUs";
+import Search from "./Pages/Search";
 
 import SignUp from "./Pages/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/imageupload" element={<ImageUpload />} />
           <Route path="/forum" element={<Forum />} />
+          <Route path="/search" element={<Search />} />
           <Route />
         </Routes>
         <Footer/>

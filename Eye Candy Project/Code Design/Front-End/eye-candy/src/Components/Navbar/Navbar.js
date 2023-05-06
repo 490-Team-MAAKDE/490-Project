@@ -64,7 +64,7 @@ function Navbar() {
               <Link className="link" to="forum"> Forum</Link>
             </li>
             <li>
-            <Link className="link" to="forum"> Search</Link>
+            <Link className="link" to="search"> Search</Link>
             </li>
             <li>
               <Link className="link" to="login">
