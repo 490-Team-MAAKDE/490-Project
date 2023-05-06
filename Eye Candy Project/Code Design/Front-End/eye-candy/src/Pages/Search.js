@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./Search.css";
 
 function Search() {
@@ -24,20 +25,29 @@ function Search() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSearchSubmit}>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-        <button type="submit">Search</button>
-      </form>
-      <div className="search-results">
-        {searchResults.map((result) => (
-          <div key={result.id}>{result.username}</div>
-        ))}
+    <div className="search-page">
+      <div className="search-container">
+        <div className="search-photo-column"></div>
+        <form className="search-form" onSubmit={handleSearchSubmit}>
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+          <button className="search-button" type="submit">
+            Search
+          </button>
+        </form>
+        <div className="search-photo-column"></div>
+        <div className="search-results">
+          {searchResults.map((result) => (
+            <div key={result.id}>
+              <Link to={`/customer/${result.id}`}>{result.username}</Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
