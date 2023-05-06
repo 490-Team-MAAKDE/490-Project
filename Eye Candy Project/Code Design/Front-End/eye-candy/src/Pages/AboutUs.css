@@ -1,0 +1,68 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+    }
+    .about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    }
+    
+    .about-us-section {
+    margin-bottom: 40px;
+    }
+    
+    .about-us-title {
+    font-size: clamp(0.8rem, 4vw, 5.16rem);
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    
+    .about-us-subtitle {
+    font-size: clamp(0.64rem, 2vw, 2.4rem);
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    
+    .about-us-description {
+    font-size: clamp(0.64rem, 2vw, 2.4rem);
+    line-height: 1.5;
+    }
+    
+    .about-us-text {
+    font-size: clamp(0.5rem, 1.6vw, 1.6rem);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #343a40;
+    }
+    
+    .about-us-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    
+    .about-us-list li {
+    font-size: clamp(0.5rem, 1.6vw, 1.6rem);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #343a40;
+    }
+    
+    .dev-list li {
+    list-style: none;
+    font-size: clamp(0.5rem, 1.6vw, 1.6rem);
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #343a40;
+    }
+    
+    hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    opacity: 0.5
+    }

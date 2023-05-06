@@ -56,6 +56,11 @@ function Navbar() {
               </Link>
             </li>
             <li>
+              <Link className="link" to="about-us">
+                About us
+              </Link>
+            </li>
+            <li>
               <Link className="link" to="forum"> Forum</Link>
             </li>
             <li>
