@@ -31,7 +31,10 @@ def predict():
         return jsonify({'error': 'No file part'}), 400
 
     file = request.files['file']
+    file = request.files['file']
 
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
 
@@ -46,7 +49,16 @@ def predict():
         img = (255 - img) / 255.0
         img = np.expand_dims(img, axis=0)
         img = np.expand_dims(img, axis=-1)
+        # They will convert to 28x28 grayscale images
+        img = Image.open(file_path).convert('L')
+        img = img.resize((28, 28), Image.ANTIALIAS)
+        img = np.array(img)
+        img = (255 - img) / 255.0
+        img = np.expand_dims(img, axis=0)
+        img = np.expand_dims(img, axis=-1)
 
+        class_prediction = model.predict(img)
+        predicted_label = int(np.argmax(class_prediction))
         class_prediction = model.predict(img)
         predicted_label = int(np.argmax(class_prediction))
 
@@ -74,6 +86,7 @@ def predict():
         with open(file_path, "rb") as f:
             user_image = base64.b64encode(f.read()).decode("utf-8")
 
+        os.remove(file_path)
         os.remove(file_path)
 
         return jsonify({
