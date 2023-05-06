@@ -12,27 +12,32 @@ import Search from "./Pages/Search";
 import SignUp from "./Pages/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
+import { createContext, useState } from "react";
 
+export const UserContext = createContext("");
 
 function App() {
+  const [username, setUsername] = useState("");
   return (
-    <ChakraProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/imageupload" element={<ImageUpload />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/search" element={<Search />} />
-          <Route />
-        </Routes>
-        <Footer/>
-      </Router>
-    </ChakraProvider>
+    <UserContext.Provider value={{ username, setUsername }}>
+      <ChakraProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/imageupload" element={<ImageUpload />} />
+            <Route path="/forum" element={<Forum />} />
+            <Route path="/search" element={<Search />} />
+            <Route />
+          </Routes>
+          <Footer />
+        </Router>
+      </ChakraProvider>
+    </UserContext.Provider>
   );
 }
 

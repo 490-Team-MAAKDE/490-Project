@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./Dashboard.css";
-
+import { UserContext } from "../App";
 function Dashboard() {
-  const [userName, setUserName] = useState("");
-
+  const { username } = useContext(UserContext);
   // Here you could make API calls to fetch user data and set the state accordingly
 
   return (
     <div className="dashboard-container">
       <h1 className="dashboard-heading">
-        {userName === ""
+        {username === ""
           ? "Sign in to access your information"
-          : `Welcome to your Dashboard, ${userName}`}
+          : `Welcome to your Dashboard, ${username}`}
         !
       </h1>
       <p className="dashboard-subheading">

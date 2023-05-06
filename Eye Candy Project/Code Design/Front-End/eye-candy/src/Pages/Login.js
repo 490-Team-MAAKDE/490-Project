@@ -1,22 +1,23 @@
 /*Ensure you have npm installed 'react' and 'axios' in integrated terminal 
 for: Eye Candy Project\Code Design\Front-End\eye-candy\src */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Button } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import Axios from "axios";
 import { Navigate } from "react-router-dom";
 import "./Login.css";
+import { UserContext } from "../App";
 
 //This is the Sign Up Funtion for the overall page
 function Login() {
-    /*This is the useState to set the value of the stated 
+  const { username, setUsername } = useContext(UserContext);
+  /*This is the useState to set the value of the stated 
   variables from whatever the user inputs in the text boxes.*/
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginStatus, setLoginStatus] = useState("");
   const [navigateToDashboard, setNavigateToDashboard] = useState(false);
 
-   //Allow for cookies to be stored to the application
+  //Allow for cookies to be stored to the application
   Axios.defaults.withCredentials = true;
 
   /*This portion obtains the values from user input and 
@@ -74,7 +75,10 @@ function Login() {
           </div>
           <br />
           <div>
-            <label htmlFor="password" typeof="password">Password: </label> <br />
+            <label htmlFor="password" typeof="password">
+              Password:{" "}
+            </label>{" "}
+            <br />
             <Input
               type="text"
               onChange={(e) => {
