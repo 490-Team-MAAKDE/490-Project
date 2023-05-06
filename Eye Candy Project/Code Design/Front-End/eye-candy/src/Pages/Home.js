@@ -80,14 +80,14 @@ function Home() {
           </div>
           <img
             src={require("../Assets/features-img2.jpg")}
-            className="features__img"
+            className={styles['features__img']}
           ></img>
           <img
             src={require("../Assets/features-img3.jpg")}
-            className="features__img"
+            className={styles['features__img']}
           ></img>
-          <div className="features__feature">
-            <div className="features_icon"></div>
+          <div className={styles['features__feature']}>
+            <div className={styles['features_icon']}></div>
             <h5 className="features__header">Optimized for color theory</h5>
             <p>
               Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim

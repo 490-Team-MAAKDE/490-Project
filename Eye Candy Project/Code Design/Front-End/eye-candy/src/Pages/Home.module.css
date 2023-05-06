@@ -69,6 +69,14 @@
   z-index: 1;
 }
 
+.img--section {
+  grid-row: 1 / 4;
+}
+
+.landing--photo {
+  grid-row: 1 / 4;
+}
+
 .landing-photo3 {
   flex: 1;
   margin-left: auto;
