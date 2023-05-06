@@ -8,7 +8,7 @@ import {
 } from "react";
 import { useInView } from "react-intersection-observer";
 
-import "./Home.css";
+import styles from "./Home.module.css";
 
 function Home() {
   const options = {
@@ -25,53 +25,53 @@ function Home() {
     <div>
       <div
         ref={header}
-        className={`header ${isHeaderVisible ? "" : "section--hidden"}`}
+        className={`${styles['header']} ${isHeaderVisible ? "" : `${styles['section--hidden']}`}`}
       >
-        <div className="head--section header__title">
-          <div className="container-narrow">
+        <div className={`${styles['head--section']} ${styles['header__title']}`}>
+          <div className={styles['container-narrow']}>
             <h1>
               When
-              <span className="highlight"> fashion </span>
+              <span className={styles['highlight']}> fashion </span>
               meets technology
             </h1>
           </div>
           <h4>Create your own outfits today</h4>
-          <button className="btn--text">Learn more ↓</button>
+          <button className={styles['btn--text']}>Learn more ↓</button>
           <img
             src={require("../Assets/Untitled.jpg")}
             alt="logo"
-            className="img--section landing-photo"
+            className={`${styles['img--section']} ${styles['landing--photo']}`}
           />
         </div>
       </div>
       <section
         ref={section}
-        className={`section ${isSectionVisible ? "" : "section--hidden"}`}
+        className={`${styles['section']} ${isSectionVisible ? "" : `${styles['section--hidden']}`}`}
         id="section--1"
       >
-        <div className="section__title">
-          <h2 className="section__description">FEATURES</h2>
-          <h3 className="section__header">
+        <div className={styles['section__title']}>
+          <h2 className={styles['section__description']}>FEATURES</h2>
+          <h3 className={styles['section__header']}>
             Everything you need to create a personalized fit
           </h3>
         </div>
-        <div className="features">
+        <div className={styles['features']}>
           <img
             src={require("../Assets/features-img1.jpg")}
-            className="features__img"
+            className={styles['features__img']}
           ></img>
-          <div className="features__feature">
-            <div className="features_icon"></div>
-            <h5 className="features__header">100% customizable</h5>
+          <div className={styles['features__feature']}>
+            <div className={styles['features_icon']}></div>
+            <h5 className={styles['features__header']}>100% customizable</h5>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
               alias sint quos? Accusantium a fugiat porro reiciendis saepe
               quibusdam debitis ducimus.
             </p>
           </div>
-          <div className="features__feature">
-            <div className="features_icon"></div>
-            <h5 className="features__header">Share your creations</h5>
+          <div className={styles['features__feature']}>
+            <div className={styles['features_icon']}></div>
+            <h5 className={styles['features__header']}>Share your creations</h5>
             <p>
               Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
               inventore ab? Nulla incidunt eius numquam sequi iste pariatur
