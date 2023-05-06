@@ -18,6 +18,18 @@ You will
         3. npm install axios -save dev
         4. npm install concurrently --save-dev
 
+Just Incase there are missing modules, pay attention to terminal for whatever is missing when you do 'npm run start:both'
+Some potential missing modules:
+        1. npm install cookie-parser
+        2. npm install bcrypt 
+        3. npm install cors
+        4. npm install nodemon
+        5. npm install axios 
+
+Those stated above are unlikely to occur but, some users come across that issue
+
+## To run the program, type in the terminal
+npm run start:both
 
 These should be the only steps required to pull the repo and make it work at this moment.
 
