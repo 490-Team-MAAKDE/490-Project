@@ -90,9 +90,9 @@ create an account*/
             />{" "}
           </div>
           <br />
-          <p>You're steps closer to creating your own style</p>
-          <Button colorScheme="yellow" marginTop={5} onClick={register}>
-            Create your Account
+          <p>You're Steps Closer to <b>Creating Your Own Style</b></p>
+          <Button colorScheme="red" marginTop={5} onClick={register}>
+            Create Your Account
           </Button>
         </form>
       </div>

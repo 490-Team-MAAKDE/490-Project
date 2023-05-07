@@ -62,17 +62,17 @@ def predict():
 
         # These are the classes that will be used to determine the items uploaded
         if predicted_label == 0:
-            product = "TShirt/top"
+            product = "TShirt"
         elif predicted_label == 1:
-            product = "Trouser"
+            product = "Pants"
         elif predicted_label == 2:
-            product = "Pullover"
+            product = "T-Shirt Loose"
         elif predicted_label == 3:
             product = "Dress"
         elif predicted_label == 4:
             product = "Coat"
         elif predicted_label == 5:
-            product = "Sandal"
+            product = "Shoes"
         elif predicted_label == 6:
             product = "Shirt"
         elif predicted_label == 7:

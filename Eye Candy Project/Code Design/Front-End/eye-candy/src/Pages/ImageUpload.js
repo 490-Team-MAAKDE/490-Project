@@ -27,9 +27,13 @@ const ImageUpload = () => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
-        <input type="file" onChange={handleImageChange} />
-        <button type="submit">Upload</button>
+        <label className="custom-file-upload">
+          <input type="file" onChange={handleImageChange} />
+          Choose The Image
+        </label>
+        <button type="submit">Upload The Image</button>
       </form>
+
       {result && (
         <div className="result">
           <h2>Product: {result.product}</h2>
