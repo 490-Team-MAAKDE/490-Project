@@ -7,6 +7,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
+      <div className="dashboard-wrapper">
       <h1 className="dashboard-heading">
         {username === ""
           ? "Sign in to access your information"
@@ -71,6 +72,7 @@ function Dashboard() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
+      </div>
       </div>
     </div>
   );

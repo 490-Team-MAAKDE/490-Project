@@ -1,21 +1,28 @@
 /* Dashboard container */
 .dashboard-container {
-    max-width: 800px;
+    background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+    display: flex;
     margin: 0 auto;
     padding: 40px;
+    justify-content: center;
+    align-items: center;
   }
-  
+  .dashboard-wrapper{
+  max-width: 800px;
+  }
   /* Dashboard heading */
   .dashboard-heading {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
   }
   
   /* Dashboard subheading */
   .dashboard-subheading {
     font-size: 18px;
     margin-bottom: 40px;
+    text-align: center;
   }
   
   /* Dashboard components container */
