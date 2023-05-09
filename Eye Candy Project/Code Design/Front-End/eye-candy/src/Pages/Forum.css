@@ -2,6 +2,8 @@ body{
   
 }
 .forum {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
