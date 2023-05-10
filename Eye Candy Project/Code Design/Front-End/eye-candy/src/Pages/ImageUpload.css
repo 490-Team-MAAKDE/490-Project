@@ -84,3 +84,17 @@ input[type="file"] {
   margin-left: 4rem;
   border-radius: 1rem;
 }
+
+.colors {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.colors-internal {
+  margin: 1rem;
+  
+}

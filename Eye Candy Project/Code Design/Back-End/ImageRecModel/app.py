@@ -97,7 +97,7 @@ def predict():
         color_codes = list(df_color['c_code'])
         color_percentages = [str(round(int(occurrence) * 100 / sum([int(occ) for occ in df_color['occurence']]), 1)) + '%' for occurrence in df_color['occurence']]
 
-        colors = [f"{code}: {percentage}" for code, percentage in zip(color_codes, color_percentages)]
+        color_dict = [{"color_code": code, "percentage": percentage} for code, percentage in zip(color_codes, color_percentages)]
         
         # These are the classes that will be used to determine the items uploaded
         if predicted_label == 0:
@@ -131,7 +131,7 @@ def predict():
         return jsonify({
             'product': product,
             'user_image': f"data:image/jpeg;base64,{user_image}",
-            'colors': color_percentages,
+            'colors': color_dict,
         })
 
     # Outputs error messages if something is input, uploaded, or mismatched wrong
