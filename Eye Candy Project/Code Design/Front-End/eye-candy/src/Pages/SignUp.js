@@ -1,45 +1,68 @@
-/*Ensure you have npm installed 'react' and 'axios' in integrated 
-terminal for: Eye Candy Project\Code Design\Front-End\eye-candy\src*/
 import React, { useState } from "react";
 import { Button, Input } from "@chakra-ui/react";
 import Axios from "axios";
 import "./SignUp.css";
 
-//This is the Sign Up Funtion for the overall page
 function SignUp() {
-  /*This is the useStates to set the value of the stated 
-variables from whatever the user inputs in the text boxes.*/
+  // Set up state variables for form input values and error messages
   const [firstnameReg, setFirstnameReg] = useState("");
   const [lastnameReg, setLastnameReg] = useState("");
   const [emailReg, setEmailReg] = useState("");
   const [usernameReg, setUsernameReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
-  //Allow for cookies to be stored to the application
+  // Allow Axios to send cookies with requests
   Axios.defaults.withCredentials = true;
 
-  /*This portion obtains the values from user input and place
-them in variables to be then posted to the SQL Database*/
-  const register = () => {
-    Axios.post("http://localhost:3001/register", {
-      firstname: firstnameReg,
-      lastname: lastnameReg,
-      email: emailReg,
-      username: usernameReg,
-      password: passwordReg,
-    }).then((response) => {
-      console.log(response);
-    });
+  // Validate email using a regular expression
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
   };
 
-  /*Display the form for users to input their details to 
-create an account*/
+  // Send a registration request to the server when the form is submitted
+  const register = () => {
+    // Check that all required fields have been filled in
+    if (
+      !firstnameReg ||
+      !lastnameReg ||
+      !usernameReg ||
+      !passwordReg
+    ) {
+      setError("Please fill in all required fields.");
+    // Check that the email address is valid
+    } else if (!validateEmail(emailReg)) {
+      setError("Please enter a valid email.");
+    } else {
+      // Send a post request to the server with the form data
+      setError("");
+      Axios.post("http://localhost:3001/register", {
+        firstname: firstnameReg,
+        lastname: lastnameReg,
+        email: emailReg,
+        username: usernameReg,
+        password: passwordReg,
+      })
+        .then((response) => {
+          console.log(response);
+          // Set the success state variable to true and redirect to the login page
+          setSuccess(true);
+          window.location.href = "/signup";
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
+
+
   return (
     <div className="signup-content">
-      <div className="signup-hero-bar">
-      </div>
+      <div className="signup-hero-bar"></div>
       <div className="signup-container">
-        <form action="">
+        <form>
           <div>
             <label htmlFor="userName">First Name: </label> <br />
             <Input
@@ -63,7 +86,7 @@ create an account*/
           <div>
             <label htmlFor="email">Email: </label> <br />
             <Input
-              type="text"
+              type="email"
               onChange={(e) => {
                 setEmailReg(e.target.value);
               }}
@@ -83,7 +106,7 @@ create an account*/
           <div>
             <label htmlFor="password">Password: </label> <br />
             <Input
-              type="text"
+              type="password"
               onChange={(e) => {
                 setPasswordReg(e.target.value);
               }}
@@ -94,12 +117,12 @@ create an account*/
           <Button colorScheme="red" marginTop={5} onClick={register}>
             Create Your Account
           </Button>
+          {error && <p>{error}</p>}
+          {success && <p>Account registered!</p>}
         </form>
       </div>
     </div>
   );
 }
 
-/*By default the page as of right now is rerouting 
-back to the Sign Up Page*/
 export default SignUp;
