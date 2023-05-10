@@ -136,6 +136,24 @@ app.get("/search/:query", (req, res) => {
   });
 });
 
+app.get('/customers/:username', (req, res) => {
+  const { username } = req.params;
+  db.query(
+    'SELECT firstname, lastname, email, username FROM customer WHERE username = ?',
+    username,
+    (err, result) => {
+      if (err) {
+        res.send({ err });
+      } else if (result.length > 0) {
+        res.send(result);
+      } else {
+        res.send({ message: 'Customer not found' });
+      }
+    }
+  );
+});
+
+
 /*Not really necessary, however still here to troubleshoot and see if
 connection is not working.*/
 app.listen(3001, () => {

@@ -1,3 +1,19 @@
+.login-hero-bar {
+  background-image: url("../Assets/pexels-miguel-á-padriñán-2882566.jpg");
+  background-position: center 19.2cm;
+  background-size: cover ;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-hero-title {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+}
+
 .login-container {
   display: flex;
   flex-direction: column;

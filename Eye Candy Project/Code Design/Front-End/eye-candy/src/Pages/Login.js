@@ -4,7 +4,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Button } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import Axios from "axios";
-import { Navigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import "./Login.css";
 import { UserContext } from "../App";
 
@@ -23,10 +23,11 @@ function Login() {
   /*This portion obtains the values from user input and 
   place them in\in variables to be verified with the SQL 
   Database*/
+  const navigate = useNavigate();
+
   const login = (e) => {
     e.preventDefault();
 
-    //Axios POST will be for inserting data when logging in
     Axios.post("http://localhost:3001/login", {
       username: username,
       password: password,
@@ -35,7 +36,7 @@ function Login() {
         setLoginStatus(response.data.message);
       } else {
         setLoginStatus(response.data[0].username);
-        setNavigateToDashboard(true);
+        navigate(`/dashboard/${response.data[0].username}`);
       }
     });
   };
@@ -62,6 +63,7 @@ function Login() {
   This will compare with SQL and determine authenticity*/
   return (
     <div className="login-content">
+      <div className="login-hero-bar"></div>
       <div className="login-container">
         <form action="" className="form-container">
           <div>

@@ -41,7 +41,7 @@ create an account*/
       <div className="signup-container">
         <form action="">
           <div>
-            <label htmlFor="userName">Username: </label> <br />
+            <label htmlFor="userName">First Name: </label> <br />
             <Input
               type="text"
               onChange={(e) => {

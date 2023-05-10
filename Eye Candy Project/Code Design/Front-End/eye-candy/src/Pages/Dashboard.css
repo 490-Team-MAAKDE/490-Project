@@ -1,57 +1,71 @@
 /* Dashboard container */
 .dashboard-container {
-    background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
-    display: flex;
-    margin: 0 auto;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
-  }
-  .dashboard-wrapper{
+  background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+  display: flex;
+  margin: 0 auto;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-wrapper {
   max-width: 800px;
-  }
-  /* Dashboard heading */
-  .dashboard-heading {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Dashboard subheading */
-  .dashboard-subheading {
-    font-size: 18px;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  /* Dashboard components container */
-  .dashboard-components {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  /* Dashboard component */
-  .dashboard-component {
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Dashboard component heading */
-  .dashboard-component-heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  /* Dashboard component description */
-  .dashboard-component-description {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
+}
+
+/* Dashboard heading */
+.dashboard-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Dashboard subheading */
+.dashboard-subheading {
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Dashboard components container */
+.dashboard-components-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dashboard component */
+.dashboard-component {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard component heading */
+.dashboard-component-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Dashboard component description */
+.dashboard-component-description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.dashboard-components {
+  flex: 1 0 calc(25% - 20px);
+  margin: 10px;
+}
+
+/* Center empty spaces in the second and subsequent rows */
+.dashboard-components-container:after {
+  content: "";
+  flex: auto;
+}
