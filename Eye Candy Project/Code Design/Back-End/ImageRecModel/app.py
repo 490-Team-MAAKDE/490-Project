@@ -1,13 +1,27 @@
-# Needed imports based on pip installs
+# Needed imports for image recognition
 from flask import Flask, request, jsonify
-from PIL import Image
-import tensorflow as tf
 from keras.models import load_model
-import numpy as np
 from flask_cors import CORS
+from werkzeug.utils import secure_filename
+
+# Needed imports for color recognition
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+import matplotlib.image as mpimg
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+import extcolors
+from colormap import rgb2hex
+
+# Needed imports for regular python use
+import cv2
 import os
 import base64
-from werkzeug.utils import secure_filename
+import numpy as np
+import tensorflow as tf
+from PIL import Image
+
 
 # Load the model outside the predict function
 model = load_model('clothing_classifier_model_v2.h5')
@@ -30,6 +44,21 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # This function checks if the file uploaded is valid
 def allowed_files(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+# Function to convert color extraction output to a DataFrame
+def color_to_df(input):
+    colors_pre_list = str(input).replace('([(','').split(', (')[0:-1]
+    df_rgb = [i.split('), ')[0] + ')' for i in colors_pre_list]
+    df_percent = [i.split('), ')[1].replace(')','') for i in colors_pre_list]
+    
+    # Convert RGB to HEX code
+    df_color_up = [rgb2hex(int(i.split(", ")[0].replace("(","")),
+                        int(i.split(", ")[1]),
+                        int(i.split(", ")[2].replace(")",""))) for i in df_rgb]
+    
+    df = pd.DataFrame(zip(df_color_up, df_percent), columns = ['c_code','occurence'])
+    return df
+
 
 # This function will pull the model and predict based on different classes
 @app.route('/predict', methods=['POST'])
@@ -60,6 +89,16 @@ def predict():
         class_prediction = model.predict(img)
         predicted_label = int(np.argmax(class_prediction))
 
+        # Extract colors
+        colors_x = extcolors.extract_from_path(file_path, tolerance=12, limit=12)
+        df_color = color_to_df(colors_x)
+
+        # Get color codes and percentages
+        color_codes = list(df_color['c_code'])
+        color_percentages = [str(round(int(occurrence) * 100 / sum([int(occ) for occ in df_color['occurence']]), 1)) + '%' for occurrence in df_color['occurence']]
+
+        color_dict = [{"color_code": code, "percentage": percentage} for code, percentage in zip(color_codes, color_percentages)]
+        
         # These are the classes that will be used to determine the items uploaded
         if predicted_label == 0:
             product = "TShirt"
@@ -92,6 +131,7 @@ def predict():
         return jsonify({
             'product': product,
             'user_image': f"data:image/jpeg;base64,{user_image}",
+            'colors': color_dict,
         })
 
     # Outputs error messages if something is input, uploaded, or mismatched wrong
