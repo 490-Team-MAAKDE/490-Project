@@ -13,9 +13,11 @@
   color: white;
   text-align: center;
 }
+.sign-h1{
+  margin-bottom: 2rem;
+}
 
 .signup-container {
-  padding-top: 3rem;
   padding-bottom: 3rem;
   display: flex;
   flex-direction: column;

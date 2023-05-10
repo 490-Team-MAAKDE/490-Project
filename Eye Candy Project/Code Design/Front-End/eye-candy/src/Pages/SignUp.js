@@ -62,6 +62,7 @@ function SignUp() {
     <div className="signup-content">
       <div className="signup-hero-bar"></div>
       <div className="signup-container">
+        <h1 className="sign-h1">Sign up</h1>
         <form>
           <div>
             <label htmlFor="userName">First Name: </label> <br />
