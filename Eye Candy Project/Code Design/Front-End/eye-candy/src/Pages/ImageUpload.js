@@ -35,15 +35,29 @@ const ImageUpload = () => {
       </form>
 
       {result && (
-        <div className="result">
-          <h2>Product: {result.product}</h2>
-          <img src={result.user_image} alt="Uploaded item" />
+      <div className="result">
+        <h2>Product: {result.product}</h2>
+        <img src={result.user_image} alt="Uploaded item" />
+        <h2>Colors:</h2>
+
+        <div className="colors">
+          {result.colors
+            .sort((a, b) => b.percentage - a.percentage)
+            .slice(0, 3)
+            .map((color, index) => (
+              <div key={index} className="colors-internal">
+                <div style={{backgroundColor: color.color_code}}>
+                  <span>
+                    Color Code: {color.color_code}, Percentage: {color.percentage}
+                  </span>
+                </div>
+              </div>
+            ))}
         </div>
-      )}
+      </div>
+    )}
     </div>
   );
 };
 
 export default ImageUpload;
-
-
