@@ -51,6 +51,7 @@
   }
   
   .search-input {
+    flex: 1;
     padding: 1.2rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -61,7 +62,7 @@
     width: 30rem;
     box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
     transition: all 0.2s ease-in-out;
-    margin-bottom: 2rem;
+    margin-right: 1rem;
   }
   
   .search-input:focus {
