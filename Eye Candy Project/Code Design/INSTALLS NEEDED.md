@@ -14,6 +14,7 @@ pip install matplotlib
 pip install extcolors
 pip install colormap
 pip install opencv-python
+pip install easydev
 
 ## Do you want this REPO? | Downloads NEEDED
 Once pulling the repo from github, open your terminal
