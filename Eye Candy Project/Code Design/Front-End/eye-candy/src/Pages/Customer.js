@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import styles from "./Customer.module.css";
 function Customer() {
   const [user, setUser] = useState([]);
   const { id } = useParams();
@@ -13,11 +14,11 @@ function Customer() {
     fetchUsers();
   }, [id]);
   return (
-    <div>
+    <div className={styles.container}>
       {!!user.length &&
         user.map((obj) => {
           return (
-            <div key={obj.id}>
+            <div key={obj.id} className={styles.userInfo}>
               <span>Username: {obj.username}</span>
               <span>Firstname: {obj.firstname}</span>
               <span>Lastname: {obj.lastname}</span>
