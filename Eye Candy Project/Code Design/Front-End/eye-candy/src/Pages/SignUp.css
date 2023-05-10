@@ -35,7 +35,8 @@
 }
 
 .form-container input[type="text"],
-.form-container input[type="password"] {
+.form-container input[type="password"],
+.form-container input[type="email"] {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
@@ -49,7 +50,8 @@
 }
 
 .form-container input[type="text"]:focus,
-.form-container input[type="password"]:focus {
+.form-container input[type="password"]:focus,
+.form-container input[type="email"]:focus  {
   outline: none;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
@@ -80,7 +82,8 @@
 }
 
 .signup-container input[type="text"],
-.signup-container input[type="password"] {
+.signup-container input[type="password"],
+.signup-container input[type="email"] {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
@@ -94,7 +97,8 @@
 }
 
 .signup-container input[type="text"]:focus,
-.signup-container input[type="password"]:focus {
+.signup-container input[type="password"]:focus,
+.signup-container input[type="email"]:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
