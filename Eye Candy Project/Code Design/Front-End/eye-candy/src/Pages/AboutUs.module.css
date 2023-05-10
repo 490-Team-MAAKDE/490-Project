@@ -12,13 +12,22 @@
   margin-bottom: 1rem;
   font-size: 3rem;
 }
-
+.subheadings{
+  font-size: 2rem;
+  font-weight: 600;
+}
 
 .aboutp{
   margin-bottom: 1.5rem;
 }
 .aboutli{
   font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.teamli{
+  font-size: 1.5rem;
+
 }
 /* section{
   margin-top: 3rem;
@@ -36,7 +45,6 @@
   /* background-color: #f8f8f8; */
   padding: 2rem;
   text-align: center;
-  margin-top: 3rem;
 }
 
 .header__title__about h1 {
@@ -44,7 +52,10 @@
   font-size: 3rem;
   color: #333;
 }
-
+.headingsimg{
+  margin: auto auto;
+  height: 7rem;
+}
 .mission {
   /* background-color: #f8f8f8; */
   padding: 3rem;

@@ -8,6 +8,11 @@ function AboutUs() {
       <div className={styles.aboutbody}>
         <header className={styles.header__title__about}>
           <h1 className={styles.headings}>Eye Candy</h1>
+          <img
+              src={require("../Assets/logo.png")}
+              className={styles.headingsimg}
+              alt="Logo for eyecandy"
+            ></img>
         </header>
         <section className={styles.mission}>
           <h2 className={styles.headings}>About Us</h2>
@@ -19,22 +24,25 @@ function AboutUs() {
           </p>
         </section>
         <section className={styles.features}>
-          <h2 className={styles.headings}>Our Features</h2>
+          <h2 className={styles.headings}> <i>Our Features</i> </h2>
           <ul>
-            <li className={styles.aboutli} >[Feature 1]</li>
-            <li className={styles.aboutli}>[Feature 2]</li>
-            <li className={styles.aboutli}>[Feature 3]</li>
+            <h3 className={styles.subheadings}>Clothing Detection</h3>
+            <li className={styles.aboutli} > Our model takes an image input of clothing and identify what the piece of clothing is</li>
+            <h3 className={styles.subheadings}>Color Detection</h3>
+            <li className={styles.aboutli}>Like clothing detection, we have a seperate model that is able to identify the colors within the image including the colors of the clothing</li>
+            <h3 className={styles.subheadings}>Forum</h3>
+            <li className={styles.aboutli}>Be able to share your outfit and reccomendations with other users on our forum page!</li>
           </ul>
         </section>
         <section className={styles.team}>
           <h2 className={styles.headings}>Our Team</h2>
           <ul>
-            <li className={styles.aboutli}>Deni</li>
-            <li className={styles.aboutli}>Matthew</li>
-            <li className={styles.aboutli}>Andres</li>
-            <li className={styles.aboutli}>Kennedy</li>
-            <li className={styles.aboutli}>Aaron</li>
-            <li className={styles.aboutli}>Erik</li>
+            <li className={styles.teamli}>Deni</li>
+            <li className={styles.teamli}>Matthew</li>
+            <li className={styles.teamli}>Andres</li>
+            <li className={styles.teamli}>Kennedy</li>
+            <li className={styles.teamli}>Aaron</li>
+            <li className={styles.teamli}>Erik</li>
           </ul>
         </section>
         <section className={styles.contact}>
