@@ -8,7 +8,7 @@ import Dashboard from "./Pages/Dashboard";
 import Footer from "./Components/Footer.js";
 import AboutUs from "./Pages/AboutUs";
 import Search from "./Pages/Search";
-
+import Customer from "./Pages/Customer";
 import SignUp from "./Pages/SignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -32,6 +32,7 @@ function App() {
             <Route path="/imageupload" element={<ImageUpload />} />
             <Route path="/forum" element={<Forum />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/customer/:id" element={<Customer />} />
             <Route />
           </Routes>
           <Footer />

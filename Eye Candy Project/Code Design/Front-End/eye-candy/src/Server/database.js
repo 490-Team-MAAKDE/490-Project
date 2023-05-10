@@ -86,7 +86,6 @@ with the data from SQL [dbeyecandy.customer]*/
 app.post("/login", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
-
   db.query(
     "SELECT * FROM customer WHERE username = ?;",
     username,
@@ -116,17 +115,28 @@ app.post("/login", (req, res) => {
           message: "User does not exist",
         });
       }
-
       console.log(err);
     }
   );
+});
+
+app.get("/customer/:id", (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  const query = `SELECT * FROM customer WHERE id = ${id}`;
+  db.query(query, (err, result) => {
+    if (err) {
+      res.status(500).send({ error: "Error searching for users." });
+    } else {
+      res.json(result);
+    }
+  });
 });
 
 //Allows to search for users through DB on Search Page
 app.get("/search/:query", (req, res) => {
   const searchTerm = req.params.query;
   const query = `SELECT * FROM customer WHERE username LIKE '%${searchTerm}%'`;
-
   db.query(query, (err, result) => {
     if (err) {
       res.status(500).send({ error: "Error searching for customers." });
