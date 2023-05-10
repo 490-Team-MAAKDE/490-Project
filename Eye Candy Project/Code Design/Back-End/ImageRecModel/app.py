@@ -1,28 +1,13 @@
-# Needed imports for image recognition
+# Needed imports based on pip installs
 from flask import Flask, request, jsonify
+from PIL import Image
 import tensorflow as tf
 from keras.models import load_model
 import numpy as np
 from flask_cors import CORS
-from werkzeug.utils import secure_filename
-
-# Needed imports for color recognition
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-import matplotlib.image as mpimg
-
-# Needed imports for regular python use
-from PIL import Image
-from matplotlib.offsetbox import OffsetImage, AnnotationBbox
-import cv2
-import extcolors
-from colormap import rgb2hex
 import os
 import base64
-
-
+from werkzeug.utils import secure_filename
 
 # Load the model outside the predict function
 model = load_model('clothing_classifier_model_v2.h5')
