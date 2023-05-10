@@ -31,6 +31,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def allowed_files(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
+
 # This function will pull the model and predict based on different classes
 @app.route('/predict', methods=['POST'])
 def predict():
