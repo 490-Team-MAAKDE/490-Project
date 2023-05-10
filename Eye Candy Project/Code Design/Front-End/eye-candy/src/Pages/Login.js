@@ -65,6 +65,7 @@ function Login() {
     <div className="login-content">
       <div className="login-hero-bar"></div>
       <div className="login-container">
+        <h1>Login</h1>
         <form action="" className="form-container">
           <div>
             <label htmlFor="userName">Username: </label> <br />
