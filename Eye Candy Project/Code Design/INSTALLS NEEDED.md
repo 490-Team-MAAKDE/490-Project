@@ -8,6 +8,12 @@ To connect the front/back end applications, the entire team has decided to use a
 pip install pillow
 pip install tensorflow
 pip install flask-cors
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install extcolors
+pip install colormap
+pip install opencv-python
 
 ## Do you want this REPO? | Downloads NEEDED
 Once pulling the repo from github, open your terminal
