@@ -21,8 +21,8 @@ input[type="file"] {
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 2rem;
-  border: none;
-  background-color: #f03e3e;
+  border: 1px solid #fff;
+  background-color: #ef6969;
   color: #fff;
   margin-bottom: 2rem;
   margin-right: 4rem;
@@ -41,8 +41,8 @@ input[type="file"] {
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 2rem;
-  border: none;
-  background-color: #f03e3e;
+  border: 1px solid #fff;
+  background-color: #ef6969;
   color: #fff;
   box-shadow: 0 0 1rem rgba(248, 106, 106, 0.5);
   box-shadow: 0 0 1rem rgba(248, 106, 106, 0.5);
@@ -67,14 +67,15 @@ input[type="file"] {
   font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
-  background-color: #f03e3e;
+  border: 1px solid #fff;
+  background-color: #ef6969;
   color: #fff;
-  box-shadow: 0 0 1rem rgba(240, 62, 62, 0.8);
+  /* box-shadow: 0 0 1rem rgba(240, 62, 62, 0.8); */
   padding: 1.2rem 2.5rem;
   font-weight: bold;
   border-radius: 1rem;
   margin-left: 4rem;
-  border: none;
+  margin-top: 2.5rem;
 }
 
 .result img {
@@ -92,9 +93,12 @@ input[type="file"] {
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 4rem;
+  border: 1px solid #333;
+  border-radius: 5px;
 }
 
 .colors-internal {
   margin: 1rem;
-  
+  border: 1px solid #777;
+  border-radius: 5px;
 }
