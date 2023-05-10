@@ -90,7 +90,7 @@ function Login() {
           </div>
           <br />
           <p>
-            Don't have an account? <a className="click-here" href="">Click here</a>
+            Don't have an account? <a className="click-here" href="/signup">Click here</a>
           </p> 
           <Button colorScheme="yellow" marginTop={5} onClick={login}>
             Login
