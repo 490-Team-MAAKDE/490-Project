@@ -38,6 +38,10 @@ const ImageUpload = () => {
         <div className="result">
           <h2>Product: {result.product}</h2>
           <img src={result.user_image} alt="Uploaded item" />
+          
+          {result.colors && result.colors.map((color, index) => (
+            <p key={index}>Color: {color}</p>
+          ))}
         </div>
       )}
     </div>
