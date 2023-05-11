@@ -2,167 +2,315 @@
 
 /* Typography */
 .aboutbody{
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-}
-.headings{
+  }
+  .headings{
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 3rem;
-}
-.subheadings{
+  }
+  .subheadings{
   font-size: 2rem;
   font-weight: 600;
-}
-
-.aboutp{
+  }
+  
+  .aboutp{
   margin-bottom: 1.5rem;
-}
-.aboutli{
+  }
+  .aboutli{
   font-size: 1.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.teamli{
+  }
+  .teamli{
   font-size: 1.5rem;
-
-}
-/* section{
+  
+  }
+  /* section{
   margin-top: 3rem;
   margin-bottom: 3rem;
-} */
-
-/* Layout */
-.container {
+  } */
+  
+  /* Layout */
+  .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-}
-
-.header__title__about {
-  /* background-color: #f8f8f8; */
-  padding: 2rem;
+  }
+  
+  .header__title__about {
+  padding: 3rem;
   text-align: center;
-}
-
-.header__title__about h1 {
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header__title__about h1 {
   margin: 0;
   font-size: 3rem;
   color: #333;
-}
-.headingsimg{
+  }
+  .headingsimg{
   margin: auto auto;
   height: 7rem;
-}
-.mission {
-  /* background-color: #f8f8f8; */
+  }
+  .mission {
   padding: 3rem;
   text-align: center;
-  line-height: 5rem;
-}
-
-.features {
-  /* background-color: #f0f0f0; */
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  }
+  
+  .features {
   padding: 3rem;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.features ul {
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .features ul {
   list-style: none;
   margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column ;
+  flex-direction: row ;
   justify-content: center;
-}
-
-.features li {
+  }
+  
+  .features li {
   flex-basis: calc(33.33% - 2rem);
   font-size: 1.5rem;
   margin: 1rem;
   text-align: center;
-}
+  border-radius: 20px;
 
-.features li img {
+  padding: 2rem;
+  }
+  
+  .features li img {
   display: block;
   width: 100%;
   max-width: 200px;
   margin: 0 auto 1rem;
   border-radius: 50%;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.features li h3 {
+  }
+  
+  .features li h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-}
-
-.features li p {
+  }
+  
+  .features li p {
   font-size: 1rem;
-}
-
-.team {
-  /* background-color: #f8f8f8; */
+  }
+  
+  .team {
   padding: 3rem;
   text-align: center;
-}
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-.team ul {
-  list-style: none;
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.team li {
-  flex-basis: calc(16.666% - 2rem);
-  margin: 1rem;
-}
-
-.team li img {
-  display: block;
-  width: 100%;
-  max-width: 100px;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.team li p {
-  font-size: 2rem;
-  margin-top: 0.5rem;
-}
-
-.contact {
-  /* background-color: #f0f0f0; */
-  padding: 3rem;
-  text-align: center;
-}
-
-.contact h2 {
-  margin-bottom: 2rem;
-}
-
-.contact p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-}
-
-.about{
-  background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
-}
+  .team ul {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .team li {
+    flex-basis: calc(16.666% - 2rem);
+    margin: 1rem;
+  }
+  
+  .team li img {
+    display: block;
+    width: 100%;
+    max-width: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team li p {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .contact {
+    /* background-color: #f0f0f0; */
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .contact p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .about {
+    background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+  }
+  
+  /* Updated styles */
+  
+  /* Typography */
+  .aboutbody {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .headings {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+  .subheadings {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .aboutp {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .aboutli {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .teamli {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header__title__about {
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .header__title__about h1 {
+    margin: 0;
+    font-size: 4rem;
+    color: #333;
+  }
+  
+  .headingsimg {
+    margin: 3rem auto;
+    height: 10rem;
+    display: block;
+  }
+  
+  .mission {
+    padding: 5rem 0;
+    text-align: center;
+    line-height: 4rem;
+  }
+  
+  .features {
+    /* background-color: #f0f0f0; */
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .features ul {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .features li {
+    flex-basis: calc(33.33% - 2rem);
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  .features li img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+  }
+  
+  .features li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .features li p {
+    font-size: 1rem;
+  }
+  
+  
+  .contact {
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .contact p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .about{
+    background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+    padding-bottom: 3rem;
+  }
+  

@@ -24,7 +24,7 @@ function AboutUs() {
           </p>
         </section>
         <section className={styles.features}>
-          <h2 className={styles.headings}> <i>Our Features</i> </h2>
+          <h2 className={styles.headings}>Our Features </h2>
           <ul>
             <h3 className={styles.subheadings}>Clothing Detection</h3>
             <li className={styles.aboutli} > Our model takes an image input of clothing and identify what the piece of clothing is</li>
