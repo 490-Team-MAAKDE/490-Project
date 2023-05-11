@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 170vh;
+  height: 150vh;
   font-weight: bold;
   font-family: inherit;
   background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
@@ -26,7 +26,7 @@ input[type="file"] {
   background-color: #ef6969;
   color: #fff;
   margin-bottom: 2rem;
-  margin-right: 4rem;
+  /* margin-right: 4rem; */
   transition: all 0.2s ease-in-out;
 }
 
@@ -57,9 +57,14 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.result {
+.form-container {
   display: flex;
   flex-direction: column;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   margin-top: 30px;
 }
@@ -75,8 +80,8 @@ input[type="file"] {
   padding: 1.2rem 2.5rem;
   font-weight: bold;
   border-radius: 1rem;
-  margin-left: 4rem;
-  margin-top: 2.5rem;
+  /* margin-left: 4rem; */
+  margin: 2.5rem;
 }
 
 .result img {
