@@ -64,18 +64,24 @@ function Home() {
             <div className={styles['features_icon']}></div>
             <h5 className={styles['features__header']}>100% customizable</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              alias sint quos? Accusantium a fugiat porro reiciendis saepe
-              quibusdam debitis ducimus.
+              The idea of outfits being 100% customizable is becoming increasingly popular.
+               With the rise of online retailers and fashion technology, consumers now have
+                more options than ever to personalize their clothing. From custom sizing to
+                 choosing fabrics, colors, and designs, fashion brands are giving customers
+                  the power to create their own unique look. This trend towards customization
+                   reflects a growing desire for individuality and self-expression in the fashion world.
             </p>
           </div>
           <div className={styles['features__feature']}>
             <div className={styles['features_icon']}></div>
             <h5 className={styles['features__header']}>Share your creations</h5>
             <p>
-              Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
-              inventore ab? Nulla incidunt eius numquam sequi iste pariatur
-              quibusdam!
+            Sharing outfit creations has become a popular trend in the fashion world.
+             Users can easily share their personalized outfits with their followers. 
+             This has created a community of fashion enthusiasts who share their style
+              and inspiration with each other. Being able to share outfit creations not only
+               allows for self-expression but also provides a platform for fashion lovers 
+               to connect and engage with one another.
             </p>
           </div>
           <img
@@ -88,11 +94,16 @@ function Home() {
           ></img>
           <div className={styles['features__feature']}>
             <div className={styles['features_icon']}></div>
-            <h5 className="features__header">Optimized for color theory</h5>
+            <h5 className={styles['features__header']}>Optimized for color theory</h5>
             <p>
-              Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
-              eveniet consequatur odit quam quos possimus assumenda dicta fuga
-              inventore ab.
+            Color theory plays an essential role in the fashion industry, particularly
+             when it comes to selecting the right colors for clothing. Different colors
+              can evoke specific emotions and convey various messages, making it crucial
+               to choose the right hues for a particular garment. Colors can be used to
+                complement skin tone, highlight specific features, and create a cohesive
+                 look. Understanding color theory and how it applies to clothing can help
+                  individuals make informed decisions when selecting their outfits, 
+                  ensuring that they look and feel their best.
             </p>
           </div>
         </div>
