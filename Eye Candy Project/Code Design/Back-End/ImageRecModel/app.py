@@ -120,7 +120,7 @@ def predict():
 
         # Get color codes and percentages
         color_codes = list(df_color['c_code'])
-        color_percentages = [str(round(int(occurrence) * 100 / sum([int(occ) for occ in df_color['occurence']]), 1)) + '%' for occurrence in df_color['occurence']]
+        color_percentages = [str(round(int(occurrence) * 100 / sum([int(occ) for occ in df_color['occurence']]), 1) + 20) + '%' for occurrence in df_color['occurence']]
 
         color_dict = [{"color_code": color_codes[0]}]
 

@@ -92,6 +92,9 @@ input[type="file"] {
 
 .result img {
   max-width: 100%;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
   height: 500px;
   box-shadow: 0 0 1rem rgba(240, 62, 62, 0.5);
   /* margin-left: 4rem; */
@@ -111,7 +114,7 @@ input[type="file"] {
 
 .colors-internal {
   margin: 1rem;
-  border: 1px solid #777;
+  border: 1px solid #333;
   border-radius: 5px;
 }
 

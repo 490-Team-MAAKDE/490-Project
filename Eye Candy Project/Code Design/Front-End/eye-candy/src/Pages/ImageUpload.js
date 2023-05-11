@@ -63,7 +63,7 @@ const ImageUpload = () => {
         <h2>Colors:</h2>
           {result.colors
             .sort((a, b) => b.percentage - a.percentage)
-            .slice(1, 4)
+            .slice(1, 3)
             .map((color, index) => (
               <div key={index} className="colors-internal">
                 <h3>Color Code: </h3>
