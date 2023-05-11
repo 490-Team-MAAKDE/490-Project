@@ -71,7 +71,7 @@ const ImageUpload = () => {
                     {color.color_code}
                   </span>
                 
-                {/* Percentage: {color.percentage} */}
+                : {color.percentage}
               </div>
             ))}
         </div>
