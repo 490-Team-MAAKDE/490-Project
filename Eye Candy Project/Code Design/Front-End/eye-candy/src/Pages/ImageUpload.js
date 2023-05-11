@@ -67,7 +67,7 @@ const ImageUpload = () => {
             .map((color, index) => (
               <div key={index} className="colors-internal">
                 <h3>Color Code: </h3>
-                  <span style={{backgroundColor: color.color_code}}>
+                  <span className="color-code" style={{backgroundColor: color.color_code}}>
                     {color.color_code}
                   </span>
                 

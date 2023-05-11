@@ -1,3 +1,9 @@
+/* :root {
+  --light: 80;
+  
+  --threshold: 60;
+} */
+
 /* ImageUpload.css */
 .container {
   display: flex;
@@ -60,6 +66,7 @@ input[type="file"] {
 .form-container {
   display: flex;
   flex-direction: column;
+  margin: 4rem
 }
 
 .result {
@@ -71,7 +78,6 @@ input[type="file"] {
 
 .result h2 {
   font-size: 3rem;
-  margin-bottom: 2rem;
   text-align: center;
   border: 1px solid #fff;
   background-color: #ef6969;
@@ -88,7 +94,7 @@ input[type="file"] {
   max-width: 100%;
   height: 500px;
   box-shadow: 0 0 1rem rgba(240, 62, 62, 0.5);
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
   border-radius: 1rem;
 }
 
@@ -109,29 +115,26 @@ input[type="file"] {
   border-radius: 5px;
 }
 
-.how-to, .social-proof {
+.how-to {
   margin:auto;
   position:absolute;
   border-radius: 5px;
   border: 1px solid #777;
   padding: 10px 5px;
-}
-
-.how-to {
-  width: 500px;
+  width: 700px;
   display: flex;
   flex-wrap: wrap;
   top: 0;
   margin: 4rem;
   left: 0;
-  transform: translateY()
+  font-size: 20px;
 }
 
 .how-to li {
   margin: 1rem;
 }
 
-.social-proof {
+/* .social-proof {
   display: flex;
   flex-wrap: wrap;
   flex-direction:row;
@@ -147,7 +150,7 @@ input[type="file"] {
   flex: 0 1 calc(25% - 1em);
   flex-wrap: wrap;
   padding: 1.25rem;
-}
+} */
 
 
 .how-to h3, .social-proof h3 {
@@ -159,5 +162,9 @@ input[type="file"] {
   list-style: none;
 }
 
+.color-code {
+  /* --switch: calc((var(--light) - var(--threshold)) * -100%);
+  color: hsl(0, 0%, var(--switch)); */
 
-
+  color: #777
+}
