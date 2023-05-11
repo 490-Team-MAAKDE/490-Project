@@ -45,7 +45,7 @@ const ImageUpload = () => {
        </ul>
      </div>
 
-      <form onSubmit={handleSubmit}>
+      <form className="form-container" onSubmit={handleSubmit}>
         <label className="custom-file-upload">
           <input type="file" onChange={handleImageChange} />
           Choose The Image
@@ -55,28 +55,30 @@ const ImageUpload = () => {
 
       {result && (
       <div className="result">
-        <h2>Product: {result.product}</h2>
-        <img src={result.user_image} alt="Uploaded item" />
-        <h2>Colors:</h2>
-
+        <span className="image-container">
+          <h2>Product: {result.product}</h2>
+          <img src={result.user_image} alt="Uploaded item" />
+        </span>
         <div className="colors">
+        <h2>Colors:</h2>
           {result.colors
             .sort((a, b) => b.percentage - a.percentage)
-            .slice(0, 3)
+            .slice(1, 4)
             .map((color, index) => (
               <div key={index} className="colors-internal">
-                <div style={{backgroundColor: color.color_code}}>
-                  <span>
-                    Color Code: {color.color_code}, Percentage: {color.percentage}
+                <h3>Color Code: </h3>
+                  <span style={{backgroundColor: color.color_code}}>
+                    {color.color_code}
                   </span>
-                </div>
+                
+                {/* Percentage: {color.percentage} */}
               </div>
             ))}
         </div>
       </div>
     )}
 
-     <div className="social-proof">
+     {/* <div className="social-proof">
        <h3>Satisfied Customers</h3>
        <ul>
          <section className="card">
@@ -92,7 +94,7 @@ const ImageUpload = () => {
            but Dress ME UP has made it so much easier." - Sarah
          </section>
        </ul>
-     </div>
+     </div> */}
 
   </div>
   );

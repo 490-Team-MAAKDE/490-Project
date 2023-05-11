@@ -63,7 +63,7 @@ def color_to_df(input):
 # This function will pull the model and predict based on different classes
 @app.route('/predict', methods=['POST'])
 def predict():
-    # This ensure file path is not empty
+    # This ensures file path is not empty
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'}), 400
 
@@ -77,6 +77,31 @@ def predict():
         filename = secure_filename(file.filename)
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
+        
+        # # Open the image using OpenCV for GrabCut
+        # img_cv2 = cv2.imread(file_path)
+        # mask = np.zeros(img_cv2.shape[:2], np.uint8)
+
+        # # Define a rectangle around the object of interest. 
+        # rect = (10, 10, img_cv2.shape[1] - 20, img_cv2.shape[0] - 20)
+
+        # bgdModel = np.zeros((1,65),np.float64)
+        # fgdModel = np.zeros((1,65),np.float64)
+
+        # # Run GrabCut
+        # cv2.grabCut(img_cv2, mask, rect, bgdModel, fgdModel, 5, cv2.GC_INIT_WITH_RECT)
+
+        # # If mask==2 or mask==1, mask2 gets 0, otherwise it gets 1 as 'uint8'
+        # mask2 = np.where((mask==2)|(mask==0), 0, 1).astype('uint8')
+
+        # # Adding additional dimension for RGB to the mask, by default it gets 1 at last dimension.
+        # mask2 = np.repeat(mask2[:, :, np.newaxis], 3, axis=2)
+
+        # # Applying the mask to the image
+        # img_cv2 = img_cv2*mask2
+
+        # # Save the image for color extraction
+        # cv2.imwrite(file_path, img_cv2)
 
         # They will convert to 28x28 grayscale images
         img = Image.open(file_path).convert('L')
@@ -97,7 +122,9 @@ def predict():
         color_codes = list(df_color['c_code'])
         color_percentages = [str(round(int(occurrence) * 100 / sum([int(occ) for occ in df_color['occurence']]), 1)) + '%' for occurrence in df_color['occurence']]
 
-        color_dict = [{"color_code": code, "percentage": percentage} for code, percentage in zip(color_codes, color_percentages)]
+        color_dict = [{"color_code": color_codes[0]}]
+
+        color_dict += [{"color_code": code, "percentage": percentage} for code, percentage in zip(color_codes[1::], color_percentages[1::])]
         
         # These are the classes that will be used to determine the items uploaded
         if predicted_label == 0:
