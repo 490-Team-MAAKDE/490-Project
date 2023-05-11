@@ -4,10 +4,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 170vh;
   font-weight: bold;
   font-family: inherit;
   background-image: linear-gradient(to bottom, #ff5f6d, #ffd08f);
+  position: relative
 }
 
 input[type="file"] {
@@ -80,7 +81,7 @@ input[type="file"] {
 
 .result img {
   max-width: 100%;
-  max-height: 500px;
+  height: 500px;
   box-shadow: 0 0 1rem rgba(240, 62, 62, 0.5);
   margin-left: 4rem;
   border-radius: 1rem;
@@ -102,3 +103,56 @@ input[type="file"] {
   border: 1px solid #777;
   border-radius: 5px;
 }
+
+.how-to, .social-proof {
+  margin:auto;
+  position:absolute;
+  border-radius: 5px;
+  border: 1px solid #777;
+  padding: 10px 5px;
+}
+
+.how-to {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  top: 0;
+  margin: 4rem;
+  left: 0;
+  transform: translateY()
+}
+
+.how-to li {
+  margin: 1rem;
+}
+
+.social-proof {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  width: 900px;
+  justify-content: space-between;
+  bottom: 0;
+  margin-top: 1rem;
+  margin: 1rem 4rem;
+  left: 0;
+}
+
+.social-proof .card {
+  flex: 0 1 calc(25% - 1em);
+  flex-wrap: wrap;
+  padding: 1.25rem;
+}
+
+
+.how-to h3, .social-proof h3 {
+  font-weight: 900;
+  font-size: large;
+}
+
+.how-to ul, .social-proof ul {
+  list-style: none;
+}
+
+
+

@@ -25,7 +25,26 @@ const ImageUpload = () => {
   };
 
   return (
-    <div className="container">
+  <div className="container">
+
+      <div className="how-to">
+       <h3>How It Works</h3>
+       <ul>
+         <li>
+           1. Upload a photo of yourself wearing clothing that represents your
+           style.
+         </li>
+         <li>
+           2. Our AI system analyzes the photo and makes recommendations based  on
+           your preferences.
+         </li>
+         <li>
+           3. View the recommended outfits and click on the ones you like to
+           purchase them.
+         </li>
+       </ul>
+     </div>
+
       <form onSubmit={handleSubmit}>
         <label className="custom-file-upload">
           <input type="file" onChange={handleImageChange} />
@@ -56,43 +75,26 @@ const ImageUpload = () => {
         </div>
       </div>
     )}
-    <div className="how-to">
-       <h3>How It Works</h3>
-       <ol>
-         <li>
-           Upload a photo of yourself wearing clothing that represents your
-           style.
-         </li>
-         <li>
-           Our AI system analyzes the photo and makes recommendations based on
-           your preferences.
-         </li>
-         <li>
-           View the recommended outfits and click on the ones you like to
-           purchase them.
-         </li>
-       </ol>
-     </div>
-
 
      <div className="social-proof">
        <h3>Satisfied Customers</h3>
        <ul>
-         <li>
+         <section className="card">
            "I love how easy it is to use Dress ME UP. It's like having a
            personal stylist at my fingertips!" - Emily
-         </li>
-         <li>
+         </section>
+         <section  className="card">
            "Thanks to Dress ME UP, I have discovered so many new fashion brands
            that I never would have known about otherwise." - Michael
-         </li>
-         <li>
+         </section>
+         <section className="card">
            "I've always struggled with finding clothes that fit my body type,
            but Dress ME UP has made it so much easier." - Sarah
-         </li>
+         </section>
        </ul>
      </div>
-    </div>
+
+  </div>
   );
 };
 
